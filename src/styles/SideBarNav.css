@@ -7,9 +7,5 @@
     flex-direction: column;
 	justify-content: flex-start;
     height: 100vh;
-    width: auto
-}
-
-.mobile-dropdown-menu-container {
-    display: flex;
+    width: auto;
 }

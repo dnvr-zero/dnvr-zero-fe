@@ -1,0 +1,17 @@
+.nav-button-container {
+    gap: 10px;
+}
+
+.nav-button-container button {
+    margin-top: 25%;
+    background-color: #418999;
+    border: none;
+    padding: 5px 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-button-container button:hover {
+    background-color: #2F6470;
+    /* outline: .5px inset whitesmoke; */
+    box-shadow: 0 0 5px whitesmoke;
+}

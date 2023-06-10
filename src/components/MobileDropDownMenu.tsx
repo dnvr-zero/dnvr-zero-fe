@@ -14,9 +14,6 @@ const MobileDropDownMenu: React.FC<MobileDropDownMenuProps> = (
 				<Navbar.Collapse id="dropdown-menu-toggle">
 					<Nav className="me-auto">
 						<NavDropdown title="DNVR-zero" id="collapsible-nav-dropdown">
-							<NavDropdown.Item href="player-profile">
-								Player Profile
-							</NavDropdown.Item>
 							<NavDropdown.Item href="home">Home</NavDropdown.Item>
 							<NavDropdown.Item href="player-profile">
 								Player Profile
