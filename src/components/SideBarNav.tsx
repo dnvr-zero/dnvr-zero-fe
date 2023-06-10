@@ -4,7 +4,7 @@ import { Container, Navbar } from 'react-bootstrap';
 
 interface SideBarNavProps {}
 
-const SideBarNav: React.FunctionComponent<SideBarNavProps> = (props) => {
+const SideBarNav: React.FC<SideBarNavProps> = (props) => {
 	return (
 		<div className='vertical-div'>
 			<Navbar collapseOnSelect expand="lg" variant="dark" className='navbar'>

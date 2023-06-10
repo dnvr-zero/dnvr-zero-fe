@@ -4,7 +4,7 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 interface MobileDropDownMenuProps {}
 
-const MobileDropDownMenu: React.FunctionComponent<MobileDropDownMenuProps> = (
+const MobileDropDownMenu: React.FC<MobileDropDownMenuProps> = (
 	props
 ) => {
 	return (
