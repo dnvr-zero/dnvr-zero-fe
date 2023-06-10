@@ -1,10 +1,12 @@
 import SideBarNav from "./components/SideBarNav";
+import MobileDropDownMenu from "./components/MobileDropDownMenu";
 
 function App() {
 	return (
-		<div className="App">
-			<SideBarNav />
-		</div>
+		<>
+			{/* <SideBarNav /> */}
+            <MobileDropDownMenu />
+		</>
 	);
 }
 

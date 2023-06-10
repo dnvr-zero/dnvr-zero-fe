@@ -1,13 +1,15 @@
 .vertical-div {
 	display: flex;
-	
 }
 
 .navbar {
     background-color: #2f6470;
-    display: flex;
     flex-direction: column;
 	justify-content: flex-start;
     height: 100vh;
     width: auto
+}
+
+.mobile-dropdown-menu-container {
+    display: flex;
 }

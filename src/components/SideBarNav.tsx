@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../styles/SideBarNav.css';
-import { Container, Navbar, Col, Row } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 
 interface SideBarNavProps {}
 
