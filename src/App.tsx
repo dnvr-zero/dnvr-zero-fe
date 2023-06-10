@@ -1,7 +1,9 @@
+import SideBarNav from "./components/SideBarNav";
+
 function App() {
 	return (
 		<div className="App">
-			DNVR-zero
+			<SideBarNav />
 		</div>
 	);
 }
