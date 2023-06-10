@@ -1,6 +1,8 @@
 import * as React from 'react';
 import SideBarNav from './components/SideBarNav';
 import MobileDropDownMenu from './components/MobileDropDownMenu';
+import HomePage from './components/HomePage';
+import { Container, Row, Col } from 'react-bootstrap';
 
 interface AppProps {}
 
@@ -20,7 +22,33 @@ const App: React.FC<AppProps> = (props) => {
 		setShowMobileNav(mobileNav);
 	};
 
-	return <>{showMobileNav ? <MobileDropDownMenu /> : <SideBarNav />}</>;
+	return (
+		<div className="main-app-container">
+			{showMobileNav ? (
+				<>
+					<Row>
+						<Col>
+							<MobileDropDownMenu />
+							<HomePage />
+						</Col>
+					</Row>
+				</>
+			) : (
+				<>
+					<Row>
+						<Col>
+							<SideBarNav />
+						</Col>
+					</Row>
+					<Row>
+						<Col>
+							<HomePage />
+						</Col>
+					</Row>
+				</>
+			)}
+		</div>
+	);
 };
 
 export default App;
