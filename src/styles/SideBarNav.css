@@ -1,11 +1,10 @@
 .vertical-div {
-	display: flex;
+    display: flex;
+    /* flex-direction: column; */
+    height: 100vh;
 }
 
 .navbar {
     background-color: #2f6470;
     flex-direction: column;
-	justify-content: flex-start;
-    height: 100vh;
-    width: auto;
 }

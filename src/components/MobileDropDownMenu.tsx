@@ -4,9 +4,7 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 interface MobileDropDownMenuProps {}
 
-const MobileDropDownMenu: React.FC<MobileDropDownMenuProps> = (
-	props
-) => {
+const MobileDropDownMenu: React.FC<MobileDropDownMenuProps> = () => {
 	return (
 		<div className="mobile-dropdown-container d-flex flex-column align-items-center justify-content-center">
 			<Navbar collapseOnSelect variant="dark">

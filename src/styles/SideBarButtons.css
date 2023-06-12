@@ -10,10 +10,27 @@
 	transition: 0.2s ease-in-out;
 }
 
+#playerProfileButton,
+#tasksButton,
+#eventsButton,
+#playersButton,
+#teamsButton {
+	border-radius: 10px;
+	box-shadow: 0 3px 5px #1a383f;
+}
+
+#playerProfileButton:hover,
+#tasksButton:hover,
+#eventsButton:hover,
+#playersButton:hover,
+#teamsButton:hover {
+	border-radius: 10px;
+	box-shadow: 0 4px 8px #1a383f;
+}
+
 .nav-button-container button:hover {
 	background-color: #2f6470;
 	/* outline: .5px inset whitesmoke; */
-	box-shadow: 0 0 5px whitesmoke;
 }
 
 .nav-button-container .btn.active {

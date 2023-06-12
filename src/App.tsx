@@ -2,11 +2,11 @@ import * as React from 'react';
 import SideBarNav from './components/SideBarNav';
 import MobileDropDownMenu from './components/MobileDropDownMenu';
 import HomePage from './components/HomePage';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 interface AppProps {}
 
-const App: React.FC<AppProps> = (props) => {
+const App: React.FC<AppProps> = () => {
 	const [showMobileNav, setShowMobileNav] = React.useState<boolean>(false);
 
 	React.useEffect(() => {
@@ -23,7 +23,7 @@ const App: React.FC<AppProps> = (props) => {
 	};
 
 	return (
-		<div className="main-app-container">
+		<div className='main-app-container'>
 			{showMobileNav ? (
 				<>
 					<Row>

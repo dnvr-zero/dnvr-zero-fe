@@ -4,7 +4,7 @@ import { ButtonGroup, Button } from 'react-bootstrap';
 
 interface SideBarButtonsProps {}
 
-const SideBarButtons: React.FC<SideBarButtonsProps> = (props) => {
+const SideBarButtons: React.FC<SideBarButtonsProps> = () => {
 	const [isActive, setIsActive] = React.useState<string | null>(null);
 
 	const handleClick = (buttonId: string) => {

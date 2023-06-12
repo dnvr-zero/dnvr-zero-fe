@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 
 interface GameInfoCardProps {}
 
-const GameInfoCard: React.FC<GameInfoCardProps> = (props) => {
+const GameInfoCard: React.FC<GameInfoCardProps> = () => {
 	return (
 		<Card className="text-center mt-4 w-75">
 			<Card.Header className="info-card-header">

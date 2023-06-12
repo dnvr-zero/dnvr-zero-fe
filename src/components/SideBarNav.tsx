@@ -5,10 +5,10 @@ import SideBarButtons from './SideBarButtons';
 
 interface SideBarNavProps {}
 
-const SideBarNav: React.FC<SideBarNavProps> = (props) => {
+const SideBarNav: React.FC<SideBarNavProps> = () => {
 	return (
 		<div className="vertical-div">
-			<Navbar collapseOnSelect expand="lg" variant="dark" className="navbar">
+			<Navbar collapseOnSelect variant="dark" className="navbar">
 				<Container>
 					<Navbar.Brand href="home">
 						DNVR-<i>zero</i>
