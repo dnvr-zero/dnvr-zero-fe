@@ -18,7 +18,7 @@ const App: React.FC<AppProps> = () => {
 	}, []);
 
 	const handleResize = () => {
-		const mobileNav = window.innerWidth < 768;
+		const mobileNav = window.innerWidth < 850;
 		setShowMobileNav(mobileNav);
 	};
 
@@ -27,7 +27,7 @@ const App: React.FC<AppProps> = () => {
 			{showMobileNav ? (
 				<Row>
 					<Col>
-						{/* <MobileDropDownMenu /> */}
+						<MobileDropDownMenu />
 						<HomePage />
 					</Col>
 				</Row>
