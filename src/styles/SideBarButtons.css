@@ -1,13 +1,6 @@
 .nav-button-container {
-	gap: 10px;
-}
-
-.nav-button-container button {
-	margin-top: 25%;
-	background-color: #418999;
-	border: none;
-	padding: 5px 15px;
-	transition: 0.2s ease-in-out;
+	margin-top: 15%;
+	gap: 15px;
 }
 
 #playerProfileButton,
@@ -16,7 +9,12 @@
 #playersButton,
 #teamsButton {
 	border-radius: 10px;
-	box-shadow: 0 3px 5px #1a383f;
+	box-shadow: 0 1px 3px 1px #1a383f;
+	font-weight: 700;
+	background-color: #2f6470;
+	border: none;
+	padding: 5px 35px;
+	transition: 0.2s ease-in-out;
 }
 
 #playerProfileButton:hover,
@@ -24,16 +22,6 @@
 #eventsButton:hover,
 #playersButton:hover,
 #teamsButton:hover {
-	border-radius: 10px;
-	box-shadow: 0 4px 8px #1a383f;
-}
-
-.nav-button-container button:hover {
-	background-color: #2f6470;
-	/* outline: .5px inset whitesmoke; */
-}
-
-.nav-button-container .btn.active {
-	background-color: whitesmoke;
-	color: #2f6470;
+	box-shadow: 0 1px 5px 2px #1a383f;
+	background-color: #418999;
 }

@@ -23,31 +23,25 @@ const App: React.FC<AppProps> = () => {
 	};
 
 	return (
-		<div className='main-app-container'>
+		<>
 			{showMobileNav ? (
-				<>
-					<Row>
-						<Col>
-							<MobileDropDownMenu />
-							<HomePage />
-						</Col>
-					</Row>
-				</>
+				<Row>
+					<Col>
+						<MobileDropDownMenu />
+						<HomePage />
+					</Col>
+				</Row>
 			) : (
-				<>
-					<Row>
-						<Col>
-							<SideBarNav />
-						</Col>
-					</Row>
-					<Row>
-						<Col>
-							<HomePage />
-						</Col>
-					</Row>
-				</>
+				<Row className="d-flex align-items-stretch">
+					<Col xs={2}>
+						<SideBarNav />
+					</Col>
+					<Col xs={9} className="d-flex flex-column align-items-center justify-content-space-evenly p-4 h-100">
+						<HomePage />
+					</Col>
+				</Row>
 			)}
-		</div>
+		</>
 	);
 };
 

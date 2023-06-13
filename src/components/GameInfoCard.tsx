@@ -1,3 +1,4 @@
+import '../styles/GameInfoCard.css'
 import * as React from 'react';
 import { Card } from 'react-bootstrap';
 
@@ -5,8 +6,8 @@ interface GameInfoCardProps {}
 
 const GameInfoCard: React.FC<GameInfoCardProps> = () => {
 	return (
-		<Card className="text-center mt-4 w-75">
-			<Card.Header className="info-card-header">
+		<Card className="game-howto-info-card-container text-center mt-4">
+			<Card.Header>
 				<strong>
 					How to play with the DNVR-<i>zero</i> community
 				</strong>
