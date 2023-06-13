@@ -27,7 +27,7 @@ const App: React.FC<AppProps> = () => {
 			{showMobileNav ? (
 				<Row>
 					<Col>
-						<MobileDropDownMenu />
+						{/* <MobileDropDownMenu /> */}
 						<HomePage />
 					</Col>
 				</Row>
@@ -36,7 +36,7 @@ const App: React.FC<AppProps> = () => {
 					<Col xs={2}>
 						<SideBarNav />
 					</Col>
-					<Col xs={9} className="d-flex flex-column align-items-center justify-content-space-evenly p-4 h-100">
+					<Col xs={10} className="d-flex flex-column p-5">
 						<HomePage />
 					</Col>
 				</Row>

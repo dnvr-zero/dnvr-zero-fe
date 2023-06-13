@@ -21,7 +21,7 @@ const MobileDropDownMenu: React.FC<MobileDropDownMenuProps> = () => {
 							<NavDropdown.Item href="players">Players</NavDropdown.Item>
 							<NavDropdown.Item href="teams">Teams</NavDropdown.Item>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href="about">About</NavDropdown.Item>
+							<NavDropdown.Item href="learn-hot-to-play">Learn How To Play</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>
 				</Navbar.Collapse>
