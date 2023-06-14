@@ -104,7 +104,6 @@ const NewTasksOnHomePage: React.FC<NewTasksOnHomePageProps> = (props) => {
 						</Button>
 					</Card.Body>
 				</Card>
-				
 			</Container>
 		</div>
 	);
