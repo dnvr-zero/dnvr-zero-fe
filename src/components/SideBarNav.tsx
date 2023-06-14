@@ -7,7 +7,7 @@ interface SideBarNavProps {}
 
 const SideBarNav: React.FC<SideBarNavProps> = () => {
 	return (
-		<Navbar collapseOnSelect className="navbar">
+		<Navbar className="navbar">
 			<Navbar.Brand href="home" className="navbar-title">
 				DNVR-<i>zero</i>
 			</Navbar.Brand>

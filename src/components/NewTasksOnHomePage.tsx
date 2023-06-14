@@ -30,7 +30,7 @@ const NewTasksOnHomePage: React.FC<NewTasksOnHomePageProps> = (props) => {
 				</Card>
 				<Card className="new-task-cards">
 					<Card.Header className="new-task-header-text">
-						Bake a Cake in the Outdoors
+						Climb a Tree
 					</Card.Header>
 					<Card.Body>
 						<p>
@@ -39,14 +39,72 @@ const NewTasksOnHomePage: React.FC<NewTasksOnHomePageProps> = (props) => {
 							enim ad minim veniam, quis nostrud exercitation ullamco laboris
 							nisi ut aliquip ex ea commodo consequat.
 						</p>
-						<footer className="blockquote-footer">
-							Lance McLancer <i>(3 days ago)</i>
+						<footer className="blockquote-footer mt-2">
+							Terry "Good Times" Graferty <i>(1 day ago)</i>
 						</footer>
 						<Button className="new-task-button">
-							Go To <b>Bake a Cake in the Outdoors</b> Task
+							Go To <b>Climb a Tree</b> Task
 						</Button>
 					</Card.Body>
 				</Card>
+				<Card className="new-task-cards">
+					<Card.Header className="new-task-header-text">
+						Climb a Tree
+					</Card.Header>
+					<Card.Body>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat.
+						</p>
+						<footer className="blockquote-footer mt-2">
+							Terry "Good Times" Graferty <i>(1 day ago)</i>
+						</footer>
+						<Button className="new-task-button">
+							Go To <b>Climb a Tree</b> Task
+						</Button>
+					</Card.Body>
+				</Card>
+				<Card className="new-task-cards">
+					<Card.Header className="new-task-header-text">
+						Climb a Tree
+					</Card.Header>
+					<Card.Body>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat.
+						</p>
+						<footer className="blockquote-footer mt-2">
+							Terry "Good Times" Graferty <i>(1 day ago)</i>
+						</footer>
+						<Button className="new-task-button">
+							Go To <b>Climb a Tree</b> Task
+						</Button>
+					</Card.Body>
+				</Card>
+				<Card className="new-task-cards">
+					<Card.Header className="new-task-header-text">
+						Climb a Tree
+					</Card.Header>
+					<Card.Body>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat.
+						</p>
+						<footer className="blockquote-footer mt-2">
+							Terry "Good Times" Graferty <i>(1 day ago)</i>
+						</footer>
+						<Button className="new-task-button">
+							Go To <b>Climb a Tree</b> Task
+						</Button>
+					</Card.Body>
+				</Card>
+				
 			</Container>
 		</div>
 	);

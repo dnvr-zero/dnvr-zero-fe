@@ -9,7 +9,7 @@ const SideBarButtons: React.FC<SideBarButtonsProps> = () => {
 	const [showModal, setShowModal] = React.useState<boolean>(false);
 
 	return (
-		<ButtonGroup vertical className="nav-button-container" size="sm">
+		<ButtonGroup vertical className="nav-button-container" >
 			<Button id="playerProfileButton">Player Profile</Button>
 			<Button id="tasksButton">Tasks</Button>
 			<Button id="eventsButton">Events</Button>

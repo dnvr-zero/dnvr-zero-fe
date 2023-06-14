@@ -32,8 +32,8 @@ const App: React.FC<AppProps> = () => {
 					</Col>
 				</Row>
 			) : (
-				<Row className="d-flex align-items-stretch">
-					<Col xs={2}>
+				<Row className="d-flex align-items-stretch mx-0">
+					<Col xs={2} className="sidebar-column">
 						<SideBarNav />
 					</Col>
 					<Col xs={10} className="d-flex flex-column p-5">

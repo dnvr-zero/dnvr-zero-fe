@@ -15,3 +15,9 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+
+/* .sidebar-column {
+    flex-shrink: 0;
+    overflow-x: clip;
+    background-color: black;
+} */
