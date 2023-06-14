@@ -1,14 +1,13 @@
 .nav-button-container {
-	/* margin-top: 15%; */
 	gap: 15px;
 }
 
 #playerProfileButton,
 #tasksButton,
+#learnButton,
 #eventsButton,
 #playersButton,
-#teamsButton,
-#learnButton {
+#teamsButton {
 	border-radius: 10px;
 	box-shadow: 0 1px 3px 1px #1a383f;
 	font-weight: 700;
@@ -18,11 +17,25 @@
 	transition: 0.2s ease-in-out;
 }
 
-#playerProfileButton:hover,
-#tasksButton:hover,
 #eventsButton:hover,
 #playersButton:hover,
-#teamsButton:hover,
+#teamsButton:hover {
+	cursor: inherit;
+    color: #1a383f
+}
+
+#eventsButton:hover::before,
+#playersButton:hover::before,
+#teamsButton:hover::before,
+#eventsButton:hover::after,
+#playersButton:hover::after,
+#teamsButton:hover::after {
+	content: ' 𝐗 ';
+    color: whitesmoke;
+}
+
+#playerProfileButton:hover,
+#tasksButton:hover,
 #learnButton:hover {
 	box-shadow: 0 1px 5px 2px #1a383f;
 	background-color: #418999;
