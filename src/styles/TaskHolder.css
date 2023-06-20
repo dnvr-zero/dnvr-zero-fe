@@ -1,6 +1,28 @@
+.task-holder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.task-title-text{
+    width: 90%;
+	padding: 10px;
+	margin-bottom: 5%;
+	border-radius: 10px;
+	box-shadow: 0 8px 8px lightgray;
+	text-align: center;
+	color: whitesmoke;
+	background-color: #2f6470;
+}
 
 .single-task-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: auto;
-
+    height: 71vh;
+    border-radius: 10px;
+	box-shadow: 0px 0px 10px 5px lightgray;
+    padding: 15px;
+    gap: 15px;
 }

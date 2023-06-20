@@ -7,8 +7,8 @@ interface TaskHolderProps {}
 
 const TaskHolder: React.FC<TaskHolderProps> = () => {
 	return (
-		<div className="d-flex flex-column align-items-center">
-			<h1>Tasks</h1>
+		<div className="task-holder-container">
+			<h1 className="task-title-text">TASKS</h1>
 			<Container className="single-task-main-container">
 				<SingleTask />
 				<SingleTask />

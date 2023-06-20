@@ -1,4 +1,4 @@
-import '../styles/SingleTaskModal.css'
+import '../styles/SingleTaskModal.css';
 import * as React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
@@ -16,7 +16,7 @@ const SingleTaskModal: React.FC<SingleTaskModalProps> = ({ show, onHide }) => {
 			aria-labelledby="contained-modal-title-vcenter"
 			centered
 		>
-			<Modal.Header className="d-flex flex-column">
+			<Modal.Header className="modal-header">
 				<Modal.Title>
 					<strong>Climb a Tree</strong>
 				</Modal.Title>

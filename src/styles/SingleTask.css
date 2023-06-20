@@ -2,11 +2,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    /* margin-top: 2%; */
+    
 }
 
 .single-task-button-container {
 	width: 100%;
-    margin-bottom: 2%;
+    /* margin-bottom: 2%; */
 }
 
 .single-task-title {
