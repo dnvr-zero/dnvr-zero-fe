@@ -1,0 +1,26 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 20%;
+    padding: 20px;
+}
+
+.button-group {
+    gap: 15px;
+}
+
+.welcome-button {
+    border-radius: 10px;
+	box-shadow: 0 1px 3px 1px #1a383f;
+	background-color: #2f6470;
+	border: none;
+	padding: 5px 20px;
+	transition: 0.2s ease-in-out;
+}
+
+.welcome-button:hover {
+    box-shadow: 0 1px 5px 2px #1a383f;
+	background-color: #418999;
+}

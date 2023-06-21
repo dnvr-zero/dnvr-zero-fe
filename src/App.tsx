@@ -4,6 +4,7 @@ import MobileDropDownMenu from './components/MobileDropDownMenu';
 import HomePage from './components/HomePage';
 import { Row, Col } from 'react-bootstrap';
 import { fetchTaskData } from './apiCalls';
+import WelcomPage from './components/WelcomePage';
 
 interface Tasks {
 	_id: string;
@@ -37,7 +38,7 @@ const App: React.FC = () => {
 			.then((tasks) => setTasks(tasks))
 			.finally(() => setLoading(false));
 	}, []);
-console.log('TASKS: ', tasks);
+// console.log('TASKS: ', tasks);
 
 
     if (tasks === null) {
@@ -47,7 +48,8 @@ console.log('TASKS: ', tasks);
 
 	return (
 		<>
-			{showMobileNav ? (
+        <WelcomPage />
+			{/* {showMobileNav ? (
 				<Row>
 					<Col>
 						<MobileDropDownMenu />
@@ -63,7 +65,7 @@ console.log('TASKS: ', tasks);
 						<HomePage tasks={tasks}/>
 					</Col>
 				</Row>
-            )}
+            )} */}
 		</>
 	);
 };

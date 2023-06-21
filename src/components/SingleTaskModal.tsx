@@ -41,6 +41,7 @@ const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 					{description}
 				</p>
 			</Modal.Body>
+			<Button className="single-task-modal-button">Sign-Up For Task</Button>
 			<Button className="single-task-modal-button">Go to Task Details</Button>
 		</Modal>
 	);
