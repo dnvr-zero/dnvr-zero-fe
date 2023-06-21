@@ -5,9 +5,22 @@ import { Modal, Button } from 'react-bootstrap';
 interface SingleTaskModalProps {
 	show: boolean;
 	onHide: () => void;
+    _id: string;
+	name: string;
+	description: string;
+	points: number | string;
+	createdby: string;
 }
 
-const SingleTaskModal: React.FC<SingleTaskModalProps> = ({ show, onHide }) => {
+const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
+	show,
+	onHide,
+	_id,
+	name,
+	description,
+	points,
+	createdby,
+}) => {
 	return (
 		<Modal
 			show={show}
@@ -18,16 +31,14 @@ const SingleTaskModal: React.FC<SingleTaskModalProps> = ({ show, onHide }) => {
 		>
 			<Modal.Header className="modal-header">
 				<Modal.Title>
-					<strong>Climb a Tree</strong>
+					<strong>{name}</strong>
 				</Modal.Title>
-				<p>Created By: Terry "Good Times" Graferty</p>
+				<p>{points}</p>
+				<p>Created By: {createdby}</p>
 			</Modal.Header>
 			<Modal.Body className="text-center">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.
+					{description}
 				</p>
 			</Modal.Body>
 			<Button className="single-task-modal-button">Go to Task Details</Button>

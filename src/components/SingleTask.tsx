@@ -3,9 +3,21 @@ import * as React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import SingleTaskModal from './SingleTaskModal';
 
-interface SingleTaskProps {}
+interface SingleTaskProps {
+	_id: string;
+	name: string;
+	description: string;
+	points: number | string;
+	createdby: string;
+}
 
-const SingleTask: React.FunctionComponent<SingleTaskProps> = (props) => {
+const SingleTask: React.FunctionComponent<SingleTaskProps> = ({
+	_id,
+	name,
+	description,
+	points,
+	createdby,
+}) => {
 	const [showSingleTaskModal, setShowSingleTaskModal] =
 		React.useState<boolean>(false);
 
@@ -16,15 +28,21 @@ const SingleTask: React.FunctionComponent<SingleTaskProps> = (props) => {
 				id="learnButton"
 				onClick={() => setShowSingleTaskModal(true)}
 			>
-				<h3 className="single-task-title">Climb a tree</h3>
-				<h4 className="points-total">Points: 15</h4>
+				<h3 className="single-task-title">{name}</h3>
+				<h4 className="points-total">{points}</h4>
 				<h4 className="completed-and-progress-text">
-					16 Completed | 62 in Progress
+					WIP: 16 Completed | 62 in Progress
 				</h4>
 			</Button>
 			<SingleTaskModal
 				show={showSingleTaskModal}
 				onHide={() => setShowSingleTaskModal(false)}
+				key={_id}
+				_id={_id}
+				name={name}
+				description={description}
+				points={points}
+				createdby={createdby}
 			/>
 		</Container>
 	);

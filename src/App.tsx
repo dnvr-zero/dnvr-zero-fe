@@ -3,20 +3,20 @@ import SideBarNav from './components/SideBarNav';
 import MobileDropDownMenu from './components/MobileDropDownMenu';
 import HomePage from './components/HomePage';
 import { Row, Col } from 'react-bootstrap';
-import fetchTaskData from './apiCalls';
+import { fetchTaskData } from './apiCalls';
 
-interface Task {
+interface Tasks {
 	_id: string;
 	name: string;
 	description: string;
 	points: number | string;
-	createdBy: string;
+	createdby: string;
 }
 
 const App: React.FC = () => {
 	const [showMobileNav, setShowMobileNav] = React.useState<boolean>(false);
 	const [loading, setLoading] = React.useState<boolean>(false);
-	const [task, setTask] = React.useState<Task[]>([]);
+	const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
 
 	React.useEffect(() => {
 		window.addEventListener('resize', handleResize);
@@ -34,11 +34,16 @@ const App: React.FC = () => {
 	React.useEffect(() => {
 		setLoading(true);
 		fetchTaskData()
-        .then(( task ) => setTask(task))
-        .finally(() => setLoading(false));
+			.then((tasks) => setTasks(tasks))
+			.finally(() => setLoading(false));
 	}, []);
-	console.log('task: ', task);
+console.log('TASKS: ', tasks);
 
+
+    if (tasks === null) {
+		// Render loading state or placeholder
+		return <div className='fs-4 fw-bold'>LOADING...</div>;
+	}
 
 	return (
 		<>
@@ -46,7 +51,7 @@ const App: React.FC = () => {
 				<Row>
 					<Col>
 						<MobileDropDownMenu />
-						<HomePage />
+						<HomePage tasks={tasks}/>
 					</Col>
 				</Row>
 			) : (
@@ -55,10 +60,10 @@ const App: React.FC = () => {
 						<SideBarNav />
 					</Col>
 					<Col xs={10} className="d-flex flex-column p-5">
-						<HomePage />
+						<HomePage tasks={tasks}/>
 					</Col>
 				</Row>
-			)}
+            )}
 		</>
 	);
 };

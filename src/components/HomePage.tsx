@@ -1,15 +1,22 @@
 import * as React from 'react';
-import NewTasksOnHomePage from './NewTasksOnHomePage';
 import TaskHolder from './TaskHolder';
 import { Container } from 'react-bootstrap';
 
-interface HomePageProps {}
+interface HomePageProps {
+	tasks: {
+		_id: string;
+		name: string;
+		description: string;
+		points: number | string;
+		createdby: string;
+	}[] | null;
+}
 
-const HomePage: React.FC<HomePageProps> = () => {
+const HomePage: React.FC<HomePageProps> = ({ tasks }) => {
 	return (
 		<Container>
-			{/* <NewTasksOnHomePage /> */}
-			<TaskHolder />
+
+                <TaskHolder tasks={tasks} />
 		</Container>
 	);
 };
