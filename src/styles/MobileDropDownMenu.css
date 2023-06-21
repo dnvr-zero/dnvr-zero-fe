@@ -1,0 +1,20 @@
+.hamburger-menu {
+    cursor: pointer;
+}
+
+.h2-text-on-main-page {
+    margin-left: 2%;
+    color: #2f6470;
+    font-weight: 700;
+}
+
+.offcanvas-header-container{
+    background-color: #2f6470;
+    margin-bottom: 5%;
+}
+
+.offcanvas-title-text {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: whitesmoke
+}
