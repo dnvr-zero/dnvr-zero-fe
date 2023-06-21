@@ -37,7 +37,7 @@ const App: React.FC = () => {
         .then(( task ) => setTask(task))
         .finally(() => setLoading(false));
 	}, []);
-	// console.log('task: ', task);
+	console.log('task: ', task);
 
 
 	return (
