@@ -1,10 +1,12 @@
 import * as React from 'react';
 import SideBarNav from './components/SideBarNav';
 import MobileDropDownMenu from './components/MobileDropDownMenu';
-import HomePage from './components/HomePage';
-import { Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { fetchTaskData } from './apiCalls';
 import WelcomPage from './components/WelcomePage';
+import { Routes, Route } from 'react-router-dom';
+import TaskHolder from './components/TaskHolder';
+import PlayerProfile from './components/PlayerProfile';
 
 interface Tasks {
 	_id: string;
@@ -38,34 +40,70 @@ const App: React.FC = () => {
 			.then((tasks) => setTasks(tasks))
 			.finally(() => setLoading(false));
 	}, []);
-// console.log('TASKS: ', tasks);
+	// console.log('TASKS: ', tasks);
 
-
-    if (tasks === null) {
+	if (tasks === null) {
 		// Render loading state or placeholder
-		return <div className='fs-4 fw-bold'>LOADING...</div>;
+		return <div className="fs-4 fw-bold">LOADING...</div>;
 	}
 
 	return (
 		<>
-        <WelcomPage />
-			{/* {showMobileNav ? (
-				<Row>
-					<Col>
-						<MobileDropDownMenu />
-						<HomePage tasks={tasks}/>
-					</Col>
-				</Row>
-			) : (
-				<Row className="d-flex align-items-stretch mx-0">
-					<Col xs={2} className="sidebar-column">
-						<SideBarNav />
-					</Col>
-					<Col xs={10} className="d-flex flex-column p-5">
-						<HomePage tasks={tasks}/>
-					</Col>
-				</Row>
-            )} */}
+			<Routes>
+				<Route path="/" element={<WelcomPage />} />
+				<Route
+					path="/tasks"
+					element={
+						showMobileNav ? (
+							<Row>
+								<Col>
+									<MobileDropDownMenu />
+									<Container>
+										<TaskHolder tasks={tasks} />
+									</Container>
+								</Col>
+							</Row>
+						) : (
+							<Row className="d-flex align-items-stretch mx-0">
+								<Col xs={2} className="sidebar-column">
+									<SideBarNav />
+								</Col>
+								<Col xs={10} className="d-flex flex-column p-5">
+									<Container>
+										<TaskHolder tasks={tasks} />
+									</Container>
+								</Col>
+							</Row>
+						)
+					}
+				/>
+				<Route
+					path="/player-profile"
+					element={
+						showMobileNav ? (
+							<Row>
+								<Col>
+									<MobileDropDownMenu />
+									<Container>
+										<PlayerProfile />
+									</Container>
+								</Col>
+							</Row>
+						) : (
+							<Row className="d-flex align-items-stretch mx-0">
+								<Col xs={2} className="sidebar-column">
+									<SideBarNav />
+								</Col>
+								<Col xs={10} className="d-flex flex-column p-5">
+									<Container>
+										<PlayerProfile />
+									</Container>
+								</Col>
+							</Row>
+						)
+					}
+				/>
+			</Routes>
 		</>
 	);
 };
