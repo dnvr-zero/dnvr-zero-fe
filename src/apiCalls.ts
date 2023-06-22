@@ -1,7 +1,6 @@
-const fetchTaskData = async (): Promise<any> => {
+export const fetchTaskData = async (): Promise<any> => {
 	try {
-		// const response = await fetch('https://dnvr-zero-be.vercel.app/task');
-        const response = await fetch('http://localhost:8000/task');
+		const response = await fetch('https://dnvr-zero-be.vercel.app/tasks');
 		if (!response.ok) {
 			throw new Error('Something went wrong. Please try again!');
 		}
@@ -12,4 +11,15 @@ const fetchTaskData = async (): Promise<any> => {
 	}
 };
 
-export default fetchTaskData;
+export const fetchPlayersData = async (): Promise<any> => {
+	try {
+		const response = await fetch('https://dnvr-zero-be.vercel.app/players');
+		if (!response.ok) {
+			throw new Error('Something went wrong. Please try again!');
+		}
+		const json = await response.json();
+		return json;
+	} catch (error) {
+		console.log('ERROR!!!', error);
+	}
+};
