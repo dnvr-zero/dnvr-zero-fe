@@ -2,11 +2,12 @@ import * as React from 'react';
 import SideBarNav from './components/SideBarNav';
 import MobileDropDownMenu from './components/MobileDropDownMenu';
 import { Container, Row, Col } from 'react-bootstrap';
-import { fetchTaskData } from './apiCalls';
+import { fetchTaskData, fetchPlayersData } from './apiCalls';
 import WelcomPage from './components/WelcomePage';
 import { Routes, Route } from 'react-router-dom';
 import TaskHolder from './components/TaskHolder';
 import PlayerProfile from './components/PlayerProfile';
+import LoadingSpinner from './components/LoadingSpinner';
 
 interface Tasks {
 	_id: string;
@@ -16,10 +17,13 @@ interface Tasks {
 	createdby: string;
 }
 
+interface Players {}
+
 const App: React.FC = () => {
 	const [showMobileNav, setShowMobileNav] = React.useState<boolean>(false);
 	const [loading, setLoading] = React.useState<boolean>(false);
 	const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
+	// const [players, setPlayers] = React.useState<Players[] | null>(null);
 
 	React.useEffect(() => {
 		window.addEventListener('resize', handleResize);
@@ -42,9 +46,19 @@ const App: React.FC = () => {
 	}, []);
 	// console.log('TASKS: ', tasks);
 
+	// React.useEffect(() => {
+	// 	setLoading(true);
+	//     fetchPlayersData()
+	// 		.then((players) => setPlayers(players))
+	// 		.finally(() => setLoading(false));
+	// }, []);
+	// console.log('PLAYERS: ', players);
+
 	if (tasks === null) {
 		// Render loading state or placeholder
-		return <div className="fs-4 fw-bold">LOADING...</div>;
+		return (
+				<LoadingSpinner />
+		);
 	}
 
 	return (
