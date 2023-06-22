@@ -73,9 +73,7 @@ const App: React.FC = () => {
 								<Row>
 									<Col>
 										<MobileDropDownMenu />
-										<Container>
-											<TaskHolder tasks={tasks} />
-										</Container>
+										<TaskHolder tasks={tasks} />
 									</Col>
 								</Row>
 							) : (
@@ -84,9 +82,7 @@ const App: React.FC = () => {
 										<SideBarNav />
 									</Col>
 									<Col xs={10} className="column p-5">
-										<Container>
-											<TaskHolder tasks={tasks} />
-										</Container>
+										<TaskHolder tasks={tasks} />
 									</Col>
 								</Row>
 							)
@@ -100,9 +96,7 @@ const App: React.FC = () => {
 								<Row>
 									<Col>
 										<MobileDropDownMenu />
-										{/* <Container> */}
-											<PlayerProfile />
-										{/* </Container> */}
+										<PlayerProfile />
 									</Col>
 								</Row>
 							) : (
