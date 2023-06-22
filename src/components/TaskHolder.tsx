@@ -16,7 +16,7 @@ interface TaskHolderProps {
 const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 	return (
 		<div className="task-holder-container">
-			<h1 className="task-title-text">TASKS</h1>
+			<h1 className="task-title-text">Tasks</h1>
 			<Container className="single-task-main-container">
 				{tasks &&
 					tasks.map((task) => (

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../styles/PlayerProfile.css';
-import { Container, Image, Col, Button } from 'react-bootstrap';
+import { Container, Image, Button } from 'react-bootstrap';
 
 interface PlayerProfileProps {}
 
@@ -10,55 +10,59 @@ const PlayerProfile: React.FC<PlayerProfileProps> = (props) => {
 			<h1 className="player-profile-title-text">Welcome, Jacky-Boy!</h1>
 			<Container className="player-container">
 				<Image
-					src="https://media.licdn.com/dms/image/D4E35AQGaj64FvdMTwQ/profile-framedphoto-shrink_400_400/0/1675969208903?e=1687993200&v=beta&t=_K8-Tf76Z3_Y3qvGwod6mJCQjeasH59RL7qk0IL57jc"
+					src="https://i.pinimg.com/originals/f1/49/6f/f1496f42d653cba9cdb771190d1ec616.jpg"
 					roundedCircle
 					className="profile-image"
 				/>
-				<h3>Tasks Completed: 187</h3>
-				<h3>Points Earned: 2,123</h3>
-			</Container>
-			<Container className="player-task-container">
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
-				</div>
-				<div className="task-and-button-div">
-					<h2>Task Description</h2>{' '}
-					<Button className="update-button">Update</Button>
+				<div className="text-container">
+					<h6>
+						<b>Tasks in Progress:</b> 7
+					</h6>
+					<h6>
+						<b>Tasks Completed:</b> 187
+					</h6>
+					<h6>
+						<b>Points Earned:</b> 2,123
+					</h6>
 				</div>
 			</Container>
+			<div className="current-task-div">
+				<h3 className="current-task-text">Current Tasks</h3>
+				<Container className="player-task-container">
+					<div className="task-and-button-div">
+						<h3>Task Description</h3>{' '}
+						<Button className="update-button">Update</Button>
+					</div>
+					<div className="task-and-button-div">
+						<h3>Task Description</h3>{' '}
+						<Button className="update-button">Update</Button>
+					</div>
+					<div className="task-and-button-div">
+						<h3>Task Description</h3>{' '}
+						<Button className="update-button">Update</Button>
+					</div>
+					<div className="task-and-button-div">
+						<h3>Task Description</h3>{' '}
+						<Button className="update-button">Update</Button>
+					</div>
+					<div className="task-and-button-div">
+						<h3>Task Description</h3>{' '}
+						<Button className="update-button">Update</Button>
+					</div>
+					<div className="task-and-button-div">
+						<h3>Task Description</h3>{' '}
+						<Button className="update-button">Update</Button>
+					</div>
+					<div className="task-and-button-div">
+						<h3>Task Description</h3>{' '}
+						<Button className="update-button">Update</Button>
+					</div>
+					<div className="task-and-button-div">
+						<h3>Task Description</h3>{' '}
+						<Button className="update-button">Update</Button>
+					</div>
+				</Container>
+			</div>
 		</div>
 	);
 };

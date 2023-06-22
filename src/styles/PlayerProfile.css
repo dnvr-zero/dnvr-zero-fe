@@ -18,17 +18,40 @@
 .player-container {
 	background-color: #2f6470;
 	display: flex;
-    flex-direction: column;
-    align-items: center;
+	/* flex-direction: column; */
+	align-items: center;
+    justify-content: center;
 	border-radius: 10px;
 	padding: 10px;
 	color: whitesmoke;
 	box-shadow: 0px 0px 10px 5px lightgray;
-    width: 50%;
+	width: 55%;
+    gap: 4em;
 }
 
 .profile-image {
 	width: 35%;
+}
+
+.text-container {
+	display: flex;
+    flex-direction: column;
+	gap: 1em;
+	margin-top: 10px;
+}
+
+.current-task-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 4%;
+}
+
+.current-task-text {
+    font-weight: 700;
+    width: 15vw;
+    text-align: center;
+    border-radius: 5px;
 }
 
 .player-task-container {
@@ -36,9 +59,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 5%;
+	margin-top: .5%;
 	overflow: auto;
-	height: 27vh;
+	height: 28vh;
+    width: 80vw;
 	gap: 15px;
 	padding: 10px;
 	border-radius: 10px;

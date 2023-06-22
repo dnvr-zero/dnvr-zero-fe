@@ -20,7 +20,7 @@ const WelcomPage: React.FC<WelcomPageProps> = (props) => {
 				{/* <Button id="welcomeButtonTwo">
 					Login with <FaGithub />
 				</Button> */}
-				<Link to="/tasks">
+				<Link to="/player-profile">
 					<Button id="welcomeButtonTwo">
 						Login with <FaGithub />
 					</Button>

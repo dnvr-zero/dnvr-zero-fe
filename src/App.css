@@ -1,0 +1,11 @@
+.sidebar-row {
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}

@@ -17,12 +17,17 @@ interface Tasks {
 	createdby: string;
 }
 
-interface Players {}
+// interface Players {
+//     _id: string;
+//     level: number;
+//     name: string;
+//     score: number;
+// }
 
 const App: React.FC = () => {
 	const [showMobileNav, setShowMobileNav] = React.useState<boolean>(false);
-	const [loading, setLoading] = React.useState<boolean>(false);
 	const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
+	const [loading, setLoading] = React.useState<boolean>(false);
 	// const [players, setPlayers] = React.useState<Players[] | null>(null);
 
 	React.useEffect(() => {
@@ -54,70 +59,66 @@ const App: React.FC = () => {
 	// }, []);
 	// console.log('PLAYERS: ', players);
 
-	if (tasks === null) {
-		// Render loading state or placeholder
-		return (
-				<LoadingSpinner />
-		);
-	}
-
 	return (
 		<>
-			<Routes>
-				<Route path="/" element={<WelcomPage />} />
-				<Route
-					path="/tasks"
-					element={
-						showMobileNav ? (
-							<Row>
-								<Col>
-									<MobileDropDownMenu />
-									<Container>
-										<TaskHolder tasks={tasks} />
-									</Container>
-								</Col>
-							</Row>
-						) : (
-							<Row className="d-flex align-items-stretch mx-0">
-								<Col xs={2} className="sidebar-column">
-									<SideBarNav />
-								</Col>
-								<Col xs={10} className="d-flex flex-column p-5">
-									<Container>
-										<TaskHolder tasks={tasks} />
-									</Container>
-								</Col>
-							</Row>
-						)
-					}
-				/>
-				<Route
-					path="/player-profile"
-					element={
-						showMobileNav ? (
-							<Row>
-								<Col>
-									<MobileDropDownMenu />
-									<Container>
+			{loading ? (
+				<LoadingSpinner />
+			) : (
+				<Routes>
+					<Route path="/" element={<WelcomPage />} />
+					<Route
+						path="/tasks"
+						element={
+							showMobileNav ? (
+								<Row>
+									<Col>
+										<MobileDropDownMenu />
+										<Container>
+											<TaskHolder tasks={tasks} />
+										</Container>
+									</Col>
+								</Row>
+							) : (
+								<Row className="sidebar-row">
+									<Col xs={2} className="sidebar-column">
+										<SideBarNav />
+									</Col>
+									<Col xs={10} className="column p-5">
+										<Container>
+											<TaskHolder tasks={tasks} />
+										</Container>
+									</Col>
+								</Row>
+							)
+						}
+					/>
+					)
+					<Route
+						path="/player-profile"
+						element={
+							showMobileNav ? (
+								<Row>
+									<Col>
+										<MobileDropDownMenu />
+										{/* <Container> */}
+											<PlayerProfile />
+										{/* </Container> */}
+									</Col>
+								</Row>
+							) : (
+								<Row className="sidebar-row">
+									<Col xs={2} className="sidebar-column">
+										<SideBarNav />
+									</Col>
+									<Col xs={10} className="column p-5">
 										<PlayerProfile />
-									</Container>
-								</Col>
-							</Row>
-						) : (
-							<Row className="d-flex align-items-stretch mx-0">
-								<Col xs={2} className="sidebar-column">
-									<SideBarNav />
-								</Col>
-								<Col xs={10} className="d-flex flex-column p-5">
-									<Container>
-										<PlayerProfile />
-									</Container>
-								</Col>
-							</Row>
-						)
-					}
-				/>
-			</Routes>
+									</Col>
+								</Row>
+							)
+						}
+					/>
+				</Routes>
+			)}
 		</>
 	);
 };
