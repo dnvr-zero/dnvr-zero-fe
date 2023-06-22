@@ -14,7 +14,7 @@ interface Tasks {
 	_id: string;
 	name: string;
 	description: string;
-	points: number | string;
+	points: string;
 	createdby: string;
 }
 
