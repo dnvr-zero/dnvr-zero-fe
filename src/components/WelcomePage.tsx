@@ -9,24 +9,31 @@ interface WelcomPageProps {}
 
 const WelcomPage: React.FC<WelcomPageProps> = (props) => {
 	return (
-		<Container className="welcome-container">
-			<h1>
-				Welcome to DNVR-<i>zero</i>
-			</h1>
-			<ButtonGroup className="button-group">
-				<Button id="welcomeButtonOne">
-					Login with <FcGoogle />
-				</Button>
-				{/* <Button id="welcomeButtonTwo">
+		<div className="welcome-div">
+			<Container className="welcome-container">
+				<h1>
+					Welcome to DNVR-<i>zero</i>
+				</h1>
+				<ButtonGroup className="button-group">
+					{/* <Button id="welcomeButtonOne">
+						Login with <FcGoogle className="icon" />
+					</Button> */}
+					<Link to="/player-profile">
+						<Button id="welcomeButtonOne">
+							Login with <FcGoogle className="icon" />
+						</Button>
+					</Link>
+					{/* <Button id="welcomeButtonTwo">
 					Login with <FaGithub />
 				</Button> */}
-				<Link to="/player-profile">
-					<Button id="welcomeButtonTwo">
-						Login with <FaGithub />
-					</Button>
-				</Link>
-			</ButtonGroup>
-		</Container>
+					<Link to="/player-signup">
+						<Button id="welcomeButtonTwo">
+							Login with <FaGithub className="icon" />
+						</Button>
+					</Link>
+				</ButtonGroup>
+			</Container>
+		</div>
 	);
 };
 

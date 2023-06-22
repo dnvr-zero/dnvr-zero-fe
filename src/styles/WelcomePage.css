@@ -1,3 +1,7 @@
+.welcome-div {
+    background-color: #2f6470;
+}
+
 .welcome-container {
     display: flex;
     flex-direction: column;
@@ -5,6 +9,7 @@
     width: 50%;
     margin-top: 20%;
     padding: 20px;
+    color: whitesmoke
 }
 
 .button-group {
@@ -14,13 +19,19 @@
 #welcomeButtonOne, #welcomeButtonTwo {
     border-radius: 10px;
 	box-shadow: 0 1px 3px 1px #1a383f;
-	background-color: #2f6470;
+	background-color: #418999;
 	border: none;
 	padding: 5px 20px;
 	transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
 #welcomeButtonOne:hover, #welcomeButtonTwo:hover {
-    box-shadow: 0 1px 5px 2px #1a383f;
-	background-color: #418999;
+    box-shadow: 0 1px 5px 2px whitesmoke;
+	background-color: #2f6470;
+}
+
+.icon {
+    margin-left: 5px;
 }
