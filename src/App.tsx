@@ -8,12 +8,13 @@ import { Routes, Route } from 'react-router-dom';
 import TaskHolder from './components/TaskHolder';
 import PlayerProfile from './components/PlayerProfile';
 import LoadingSpinner from './components/LoadingSpinner';
+import PlayerSignUp from './components/PlayerSignUp';
 
 interface Tasks {
 	_id: string;
 	name: string;
 	description: string;
-	points: number | string;
+	points: string;
 	createdby: string;
 }
 
@@ -66,6 +67,7 @@ const App: React.FC = () => {
 			) : (
 				<Routes>
 					<Route path="/" element={<WelcomPage />} />
+					<Route path="/player-signup" element={<PlayerSignUp />} />
 					<Route
 						path="/tasks"
 						element={
