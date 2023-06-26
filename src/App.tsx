@@ -47,7 +47,7 @@ const App: React.FC = () => {
 	React.useEffect(() => {
 		setLoading(true);
 		fetchTaskData()
-			.then((tasks) => setTasks(tasks))
+			.then((tasks) => setTasks(tasks.data))
 			.finally(() => setLoading(false));
 	}, []);
 	// console.log('TASKS: ', tasks);
