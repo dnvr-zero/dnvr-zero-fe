@@ -11,19 +11,15 @@ const SideBarButtons: React.FC<SideBarButtonsProps> = () => {
 
 	return (
 		<ButtonGroup vertical className="nav-button-container">
-			<Button id="playerProfileButton">
-				<Link
-					to="/player-profile"
-					style={{ textDecoration: 'none', color: 'inherit' }}
-				>
-					Player Profile
-				</Link>
-			</Button>
-			<Button id="tasksButton">
-				<Link to="/tasks" style={{ textDecoration: 'none', color: 'inherit' }}>
-					Tasks
-				</Link>
-			</Button>
+			<Link
+				to="/player-profile"
+				style={{ textDecoration: 'none', color: 'inherit' }}
+			>
+				<Button id="playerProfileButton">Player Profile</Button>
+			</Link>
+			<Link to="/tasks" style={{ textDecoration: 'none', color: 'inherit' }}>
+				<Button id="tasksButton">Tasks</Button>
+			</Link>
 			<Button id="eventsButton">Events</Button>
 			<Button id="playersButton">Players</Button>
 			<Button id="teamsButton">Teams</Button>

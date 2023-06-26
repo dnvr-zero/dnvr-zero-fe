@@ -8,7 +8,20 @@
 
 .single-task-button-container {
 	width: 100%;
+    border-radius: 10px;
+	box-shadow: 0 1px 3px 1px #1a383f;
+	font-weight: 700;
+	background-color: #2f6470;
+	border: none;
+	padding: 5px 20px;
+	transition: 0.2s ease-in-out;
     /* margin-bottom: 2%; */
+}
+
+.single-task-button-container:hover {
+    box-shadow: 0 1px 5px 2px #1a383f;
+	background-color: #418999;
+
 }
 
 .single-task-title {

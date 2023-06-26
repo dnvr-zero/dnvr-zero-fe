@@ -18,7 +18,6 @@ const SingleTask: React.FC<Tasks> = ({
 		<Container className="single-task-container">
 			<Button
 				className="single-task-button-container"
-				id="learnButton"
 				onClick={() => setShowSingleTaskModal(true)}
 			>
 				<h3 className="single-task-title">{name}</h3>
