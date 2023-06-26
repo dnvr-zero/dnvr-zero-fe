@@ -2,12 +2,16 @@ import * as React from 'react';
 import '../styles/PlayerProfile.css';
 import { Container, Image, Button } from 'react-bootstrap';
 
-interface PlayerProfileProps {}
+interface PlayerProfileProps {
+    nameNode: string;
+}
 
-const PlayerProfile: React.FC<PlayerProfileProps> = (props) => {
+const PlayerProfile: React.FC<PlayerProfileProps> = ({nameNode}) => {
+	
+
 	return (
 		<div className="player-profile-div">
-			<h1 className="player-profile-title-text">Welcome, Jacky-Boy!</h1>
+			<h1 className="player-profile-title-text">Welcome, {nameNode}</h1>
 			<Container className="player-container">
 				<Image
 					src="https://i.pinimg.com/originals/f1/49/6f/f1496f42d653cba9cdb771190d1ec616.jpg"
