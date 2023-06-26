@@ -7,7 +7,7 @@ import '../styles/LoginPage.css';
 
 interface LoginPageProps {}
 
-const LoginPage: React.FC<LoginPageProps> = (props) => {
+const LoginPage: React.FC<LoginPageProps> = () => {
 	return (
 		<div className="login-div">
 			<Container className="login-container">
@@ -23,17 +23,12 @@ const LoginPage: React.FC<LoginPageProps> = (props) => {
 							Login with <FcGoogle className="icon" />
 						</Button>
 					</Link>
-					{/* <Button id="welcomeButtonTwo">
-					Login with <FaGithub />
-				</Button> */}
-					{/* <Link to="/player-signup"> */}
 					<Button
 						id="loginButtonTwo"
 						href="https://github.com/login/oauth/authorize?client_id=c820624d21ec78915700&redirect_uri=http://localhost:8080/oauth/redirect"
 					>
 						Login with <FaGithub className="icon" />
 					</Button>
-					{/* </Link> */}
 				</ButtonGroup>
 			</Container>
 		</div>

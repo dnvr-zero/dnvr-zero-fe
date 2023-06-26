@@ -1,10 +1,6 @@
 import * as React from 'react';
 import { Modal } from 'react-bootstrap';
-
-interface GameInfoModalProps {
-	show: boolean;
-	onHide: () => void;
-}
+import { GameInfoModalProps } from '../model';
 
 const GameInfoModal: React.FC<GameInfoModalProps> = ({ show, onHide }) => {
 	return (

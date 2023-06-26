@@ -1,16 +1,7 @@
 import '../styles/SingleTaskModal.css';
 import * as React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-
-interface SingleTaskModalProps {
-	show: boolean;
-	onHide: () => void;
-    _id: string;
-	name: string;
-	description: string;
-	points: number | string;
-	createdby: string;
-}
+import { SingleTaskModalProps } from '../model';
 
 const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 	show,
@@ -37,9 +28,7 @@ const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 				<p>Created By: {createdby}</p>
 			</Modal.Header>
 			<Modal.Body className="text-center">
-				<p>
-					{description}
-				</p>
+				<p>{description}</p>
 			</Modal.Body>
 			<Button className="single-task-modal-button">Sign-Up For Task</Button>
 			<Button className="single-task-modal-button">Go to Task Details</Button>
