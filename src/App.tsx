@@ -58,7 +58,7 @@ const App: React.FC = () => {
 	const [profilePicture, setProfilePicture] = React.useState('');
 
 	const urlParams = new URLSearchParams(window.location.search);
-	const token = urlParams.get('access_token');
+	const token = urlParams.get('token');
 
 	React.useEffect(() => {
 		fetch('https://api.github.com/user', {
@@ -69,6 +69,7 @@ const App: React.FC = () => {
 		})
 			.then((res) => res.json())
 			.then((res) => {
+				console.log(res, "res")
 				const profilePictureUrl = res.avatar_url;
 				setProfilePicture(profilePictureUrl);
 
