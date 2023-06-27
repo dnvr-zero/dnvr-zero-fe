@@ -25,7 +25,7 @@ const LoginPage: React.FC<LoginPageProps> = () => {
 					</Link>
 					<Button
 						id="loginButtonTwo"
-						href="https://github.com/login/oauth/authorize?client_id=c820624d21ec78915700&redirect_uri=http://localhost:8080/oauth/redirect"
+						href="http://localhost:8000/auth"
 					>
 						Login with <FaGithub className="icon" />
 					</Button>
