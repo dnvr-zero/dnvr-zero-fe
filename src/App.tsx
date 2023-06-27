@@ -11,7 +11,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import PlayerSignUp from './components/PlayerSignUp';
 import { Tasks } from './model';
 import useGitHubOAuth from './hooks/useGitHubOAuth';
-
+import useMobileNav from './hooks/useMobileNav';
 
 // interface Players {
 //     _id: string;
@@ -21,23 +21,9 @@ import useGitHubOAuth from './hooks/useGitHubOAuth';
 // }
 
 const App: React.FC = () => {
-	const [showMobileNav, setShowMobileNav] = React.useState<boolean>(false);
-	const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
+    const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
 	const [loading, setLoading] = React.useState<boolean>(false);
 	// const [players, setPlayers] = React.useState<Players[] | null>(null);
-
-	React.useEffect(() => {
-		window.addEventListener('resize', handleResize);
-		handleResize();
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, []);
-
-	const handleResize = () => {
-		const mobileNav = window.innerWidth < 850;
-		setShowMobileNav(mobileNav);
-	};
 
 	React.useEffect(() => {
 		setLoading(true);
@@ -55,6 +41,7 @@ const App: React.FC = () => {
 	// console.log('PLAYERS: ', players);
 
     const userData = useGitHubOAuth()
+    const showMobileNav = useMobileNav();
 
 	return (
 		<Routes>
