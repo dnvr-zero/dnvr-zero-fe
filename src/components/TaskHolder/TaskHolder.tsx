@@ -1,8 +1,8 @@
-import '../styles/TaskHolder.css';
+import './TaskHolder.css'
 import * as React from 'react';
-import SingleTask from './SingleTask';
+import SingleTask from '../SingleTask/SingleTask';
 import { Container, Form, Dropdown } from 'react-bootstrap';
-import { TaskHolderProps } from '../model';
+import { TaskHolderProps } from '../../model';
 
 const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 	const [searchTerm, setSearchTerm] = React.useState('');

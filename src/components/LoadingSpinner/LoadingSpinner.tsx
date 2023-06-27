@@ -1,6 +1,6 @@
 import * as React from 'react';
-import '../styles/LoadingSpinner.css';
-import oval from '../images/oval.svg';
+import './LoadingSpinner.css';
+import oval from '../../images/oval.svg';
 
 interface LoadingSpinnerProps {
 }

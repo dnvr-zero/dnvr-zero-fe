@@ -1,8 +1,8 @@
-import '../styles/MobileDropDownMenu.css';
+import './MobileDropDownMenu.css';
 import * as React from 'react';
 import { Container, Offcanvas } from 'react-bootstrap';
 import { FaBars } from 'react-icons/fa';
-import SideBarButtons from './SideBarButtons';
+import SideBarButtons from '../SideBarButtons/SideBarButtons';
 
 interface MobileDropDownMenuProps {}
 
@@ -22,12 +22,12 @@ const MobileDropDownMenu: React.FC<MobileDropDownMenuProps> = () => {
 				</h2>
 			</Container>
 			<Offcanvas show={show} onHide={() => setShow(false)} responsive="lg">
-				<Offcanvas.Header closeButton className='offcanvas-header-container'>
+				<Offcanvas.Header closeButton className="offcanvas-header-container">
 					<Offcanvas.Title className="offcanvas-title-text">
 						DNVR-<i>zero</i>
 					</Offcanvas.Title>
 				</Offcanvas.Header>
-				<Offcanvas.Body className='d-flex flex-column align-items-center'>
+				<Offcanvas.Body className="d-flex flex-column align-items-center">
 					<SideBarButtons />
 				</Offcanvas.Body>
 			</Offcanvas>

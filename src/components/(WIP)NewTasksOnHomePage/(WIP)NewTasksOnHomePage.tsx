@@ -1,5 +1,5 @@
+import './NewTasksOnHomePage.css'
 import { Container, Card, Button } from 'react-bootstrap';
-import '../styles/NewTasksOnHomePage.css';
 import * as React from 'react';
 
 interface NewTasksOnHomePageProps {}

@@ -1,7 +1,7 @@
-import '../styles/SideBarButtons.css';
+import './SideBarButtons.css';
 import * as React from 'react';
 import { ButtonGroup, Button } from 'react-bootstrap';
-import GameInfoModal from './GameInfoModal';
+import GameInfoModal from '../GameInfoModal/GameInfoModal';
 import { Link } from 'react-router-dom';
 
 interface SideBarButtonsProps {}

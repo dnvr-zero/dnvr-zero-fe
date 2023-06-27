@@ -1,7 +1,7 @@
 import * as React from 'react';
-import '../styles/PlayerProfile.css';
+import './PlayerProfile.css'
 import { Container, Image, Button } from 'react-bootstrap';
-import { PlayerProfileProps } from '../model';
+import { PlayerProfileProps } from '../../model';
 
 const PlayerProfile: React.FC<PlayerProfileProps> = ({
 	name,

@@ -1,7 +1,7 @@
-import '../styles/SingleTaskModal.css';
+import './SingleTaskModal.css'
 import * as React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import { SingleTaskModalProps } from '../model';
+import { SingleTaskModalProps } from '../../model';
 
 const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 	show,

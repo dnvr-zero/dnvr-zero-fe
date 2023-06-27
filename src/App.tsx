@@ -1,14 +1,14 @@
 import * as React from 'react';
-import SideBarNav from './components/SideBarNav';
-import MobileDropDownMenu from './components/MobileDropDownMenu';
+import SideBarNav from './components/SideBarNav/SideBarNav';
+import MobileDropDownMenu from './components/MobileDropDownMenu/MobileDropDownMenu';
 import { Row, Col } from 'react-bootstrap';
 import { fetchTaskData, fetchPlayersData } from './apiCalls';
-import LoginPage from './components/LoginPage';
+import LoginPage from './components/LoginPage/LoginPage';
 import { Routes, Route } from 'react-router-dom';
-import TaskHolder from './components/TaskHolder';
-import PlayerProfile from './components/PlayerProfile';
-import LoadingSpinner from './components/LoadingSpinner';
-import PlayerSignUp from './components/PlayerSignUp';
+import TaskHolder from './components/TaskHolder/TaskHolder';
+import PlayerProfile from './components/PlayerProfile/PlayerProfile';
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
+import PlayerSignUp from './components/PlayerSignUp/PlayerSignUp';
 import { Tasks } from './model';
 import useGitHubOAuth from './hooks/useGitHubOAuth';
 import useMobileNav from './hooks/useMobileNav';
@@ -21,7 +21,7 @@ import useMobileNav from './hooks/useMobileNav';
 // }
 
 const App: React.FC = () => {
-    const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
+	const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
 	const [loading, setLoading] = React.useState<boolean>(false);
 	// const [players, setPlayers] = React.useState<Players[] | null>(null);
 
@@ -40,8 +40,8 @@ const App: React.FC = () => {
 	// }, []);
 	// console.log('PLAYERS: ', players);
 
-    const userData = useGitHubOAuth()
-    const showMobileNav = useMobileNav();
+	const userData = useGitHubOAuth();
+	const showMobileNav = useMobileNav();
 
 	return (
 		<Routes>
