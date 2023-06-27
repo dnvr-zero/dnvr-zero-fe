@@ -4,12 +4,12 @@ import { Container, Image, Button } from 'react-bootstrap';
 import { PlayerProfileProps } from '../model';
 
 const PlayerProfile: React.FC<PlayerProfileProps> = ({
-	nameNode,
+	name,
 	profilePicture,
 }) => {
 	return (
 		<div className="player-profile-div">
-			<h1 className="player-profile-title-text">Welcome, {nameNode}</h1>
+			<h1 className="player-profile-title-text">Welcome, {name}</h1>
 			<Container className="player-container">
 				<Image src={profilePicture} roundedCircle className="profile-image" />
 				<div className="text-container">

@@ -9,7 +9,7 @@ export interface Tasks {
 
 // PlayerProfile.tsx
 export interface PlayerProfileProps {
-	nameNode: string;
+	name: string;
 	profilePicture: string;
 }
 

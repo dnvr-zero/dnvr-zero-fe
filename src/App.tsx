@@ -10,6 +10,8 @@ import PlayerProfile from './components/PlayerProfile';
 import LoadingSpinner from './components/LoadingSpinner';
 import PlayerSignUp from './components/PlayerSignUp';
 import { Tasks } from './model';
+import useGitHubOAuth from './hooks/useGitHubOAuth';
+
 
 // interface Players {
 //     _id: string;
@@ -52,32 +54,7 @@ const App: React.FC = () => {
 	// }, []);
 	// console.log('PLAYERS: ', players);
 
-	///////////////////////////////////////////////////////////////////////////
-	// FUTURE ===> CREATE CUSTOM HOOK FOR THE GITHUB OAUTH
-	const [nameNode, setNameNode] = React.useState('');
-	const [profilePicture, setProfilePicture] = React.useState('');
-
-	const urlParams = new URLSearchParams(window.location.search);
-	const token = urlParams.get('token');
-
-	React.useEffect(() => {
-		fetch('https://api.github.com/user', {
-			headers: {
-				Accept: 'application/vnd.github.v3+json',
-				Authorization: 'token ' + token,
-			},
-		})
-			.then((res) => res.json())
-			.then((res) => {
-				console.log(res, 'res');
-				const profilePictureUrl = res.avatar_url;
-				setProfilePicture(profilePictureUrl);
-
-				const name = res.name;
-				setNameNode(name);
-			});
-	}, [token]);
-	///////////////////////////////////////////////////////////////////////////
+    const userData = useGitHubOAuth()
 
 	return (
 		<Routes>
@@ -118,8 +95,8 @@ const App: React.FC = () => {
 								<Col>
 									<MobileDropDownMenu />
 									<PlayerProfile
-										nameNode={nameNode}
-										profilePicture={profilePicture}
+										name={userData?.name || ''}
+										profilePicture={userData?.profilePicture || ''}
 									/>
 								</Col>
 							</Row>
@@ -130,8 +107,8 @@ const App: React.FC = () => {
 								</Col>
 								<Col xs={10} className="column p-5">
 									<PlayerProfile
-										nameNode={nameNode}
-										profilePicture={profilePicture}
+										name={userData?.name || ''}
+										profilePicture={userData?.profilePicture || ''}
 									/>
 								</Col>
 							</Row>
