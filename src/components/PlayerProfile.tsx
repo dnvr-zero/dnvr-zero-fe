@@ -1,19 +1,17 @@
 import * as React from 'react';
 import '../styles/PlayerProfile.css';
 import { Container, Image, Button } from 'react-bootstrap';
+import { PlayerProfileProps } from '../model';
 
-interface PlayerProfileProps {}
-
-const PlayerProfile: React.FC<PlayerProfileProps> = (props) => {
+const PlayerProfile: React.FC<PlayerProfileProps> = ({
+	nameNode,
+	profilePicture,
+}) => {
 	return (
 		<div className="player-profile-div">
-			<h1 className="player-profile-title-text">Welcome, Jacky-Boy!</h1>
+			<h1 className="player-profile-title-text">Welcome, {nameNode}</h1>
 			<Container className="player-container">
-				<Image
-					src="https://i.pinimg.com/originals/f1/49/6f/f1496f42d653cba9cdb771190d1ec616.jpg"
-					roundedCircle
-					className="profile-image"
-				/>
+				<Image src={profilePicture} roundedCircle className="profile-image" />
 				<div className="text-container">
 					<h6>
 						<b>Tasks in Progress:</b> 7

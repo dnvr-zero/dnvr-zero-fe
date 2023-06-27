@@ -1,22 +1,15 @@
 import * as React from 'react';
 import SideBarNav from './components/SideBarNav';
 import MobileDropDownMenu from './components/MobileDropDownMenu';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { fetchTaskData, fetchPlayersData } from './apiCalls';
-import WelcomPage from './components/WelcomePage';
+import LoginPage from './components/LoginPage';
 import { Routes, Route } from 'react-router-dom';
 import TaskHolder from './components/TaskHolder';
 import PlayerProfile from './components/PlayerProfile';
 import LoadingSpinner from './components/LoadingSpinner';
 import PlayerSignUp from './components/PlayerSignUp';
-
-interface Tasks {
-	_id: string;
-	name: string;
-	description: string;
-	points: string;
-	createdby: string;
-}
+import { Tasks } from './model';
 
 // interface Players {
 //     _id: string;
@@ -50,7 +43,6 @@ const App: React.FC = () => {
 			.then((tasks) => setTasks(tasks.data))
 			.finally(() => setLoading(false));
 	}, []);
-	// console.log('TASKS: ', tasks);
 
 	// React.useEffect(() => {
 	// 	setLoading(true);
@@ -60,13 +52,40 @@ const App: React.FC = () => {
 	// }, []);
 	// console.log('PLAYERS: ', players);
 
+	///////////////////////////////////////////////////////////////////////////
+	// FUTURE ===> CREATE CUSTOM HOOK FOR THE GITHUB OAUTH
+	const [nameNode, setNameNode] = React.useState('');
+	const [profilePicture, setProfilePicture] = React.useState('');
+
+	const urlParams = new URLSearchParams(window.location.search);
+	const token = urlParams.get('token');
+
+	React.useEffect(() => {
+		fetch('https://api.github.com/user', {
+			headers: {
+				Accept: 'application/vnd.github.v3+json',
+				Authorization: 'token ' + token,
+			},
+		})
+			.then((res) => res.json())
+			.then((res) => {
+				console.log(res, "res")
+				const profilePictureUrl = res.avatar_url;
+				setProfilePicture(profilePictureUrl);
+
+				const name = res.name;
+				setNameNode(name);
+			});
+	}, [token]);
+	///////////////////////////////////////////////////////////////////////////
+
 	return (
 		<>
 			{loading ? (
 				<LoadingSpinner />
 			) : (
 				<Routes>
-					<Route path="/" element={<WelcomPage />} />
+					<Route path="/" element={<LoginPage />} />
 					<Route path="/player-signup" element={<PlayerSignUp />} />
 					<Route
 						path="/tasks"
@@ -92,13 +111,16 @@ const App: React.FC = () => {
 					/>
 					)
 					<Route
-						path="/player-profile"
+						path={`/player-profile`}
 						element={
 							showMobileNav ? (
 								<Row>
 									<Col>
 										<MobileDropDownMenu />
-										<PlayerProfile />
+										<PlayerProfile
+											nameNode={nameNode}
+											profilePicture={profilePicture}
+										/>
 									</Col>
 								</Row>
 							) : (
@@ -107,7 +129,10 @@ const App: React.FC = () => {
 										<SideBarNav />
 									</Col>
 									<Col xs={10} className="column p-5">
-										<PlayerProfile />
+										<PlayerProfile
+											nameNode={nameNode}
+											profilePicture={profilePicture}
+										/>
 									</Col>
 								</Row>
 							)

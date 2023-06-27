@@ -2,16 +2,9 @@ import '../styles/SingleTask.css';
 import * as React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import SingleTaskModal from './SingleTaskModal';
+import { Tasks } from '../model';
 
-interface SingleTaskProps {
-	_id: string;
-	name: string;
-	description: string;
-	points: number | string;
-	createdby: string;
-}
-
-const SingleTask: React.FunctionComponent<SingleTaskProps> = ({
+const SingleTask: React.FC<Tasks> = ({
 	_id,
 	name,
 	description,
@@ -25,7 +18,6 @@ const SingleTask: React.FunctionComponent<SingleTaskProps> = ({
 		<Container className="single-task-container">
 			<Button
 				className="single-task-button-container"
-				id="learnButton"
 				onClick={() => setShowSingleTaskModal(true)}
 			>
 				<h3 className="single-task-title">{name}</h3>
