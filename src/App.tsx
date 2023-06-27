@@ -69,7 +69,7 @@ const App: React.FC = () => {
 		})
 			.then((res) => res.json())
 			.then((res) => {
-				console.log(res, "res")
+				console.log(res, 'res');
 				const profilePictureUrl = res.avatar_url;
 				setProfilePicture(profilePictureUrl);
 
@@ -80,67 +80,66 @@ const App: React.FC = () => {
 	///////////////////////////////////////////////////////////////////////////
 
 	return (
-		<>
-			{loading ? (
-				<LoadingSpinner />
-			) : (
-				<Routes>
-					<Route path="/" element={<LoginPage />} />
-					<Route path="/player-signup" element={<PlayerSignUp />} />
-					<Route
-						path="/tasks"
-						element={
-							showMobileNav ? (
-								<Row>
-									<Col>
-										<MobileDropDownMenu />
-										<TaskHolder tasks={tasks} />
-									</Col>
-								</Row>
-							) : (
-								<Row className="sidebar-row">
-									<Col xs={2} className="sidebar-column">
-										<SideBarNav />
-									</Col>
-									<Col xs={10} className="column p-5">
-										<TaskHolder tasks={tasks} />
-									</Col>
-								</Row>
-							)
-						}
-					/>
-					)
-					<Route
-						path={`/player-profile`}
-						element={
-							showMobileNav ? (
-								<Row>
-									<Col>
-										<MobileDropDownMenu />
-										<PlayerProfile
-											nameNode={nameNode}
-											profilePicture={profilePicture}
-										/>
-									</Col>
-								</Row>
-							) : (
-								<Row className="sidebar-row">
-									<Col xs={2} className="sidebar-column">
-										<SideBarNav />
-									</Col>
-									<Col xs={10} className="column p-5">
-										<PlayerProfile
-											nameNode={nameNode}
-											profilePicture={profilePicture}
-										/>
-									</Col>
-								</Row>
-							)
-						}
-					/>
-				</Routes>
-			)}
-		</>
+		<Routes>
+			<Route path="/" element={<LoginPage />} />
+			<Route path="/player-signup" element={<PlayerSignUp />} />
+			<Route
+				path="/tasks"
+				element={
+					<>
+						{loading && <LoadingSpinner />}
+						{showMobileNav ? (
+							<Row>
+								<Col>
+									<MobileDropDownMenu />
+									<TaskHolder tasks={tasks} />
+								</Col>
+							</Row>
+						) : (
+							<Row className="sidebar-row">
+								<Col xs={2} className="sidebar-column">
+									<SideBarNav />
+								</Col>
+								<Col xs={10} className="column p-5">
+									<TaskHolder tasks={tasks} />
+								</Col>
+							</Row>
+						)}
+					</>
+				}
+			/>
+			<Route
+				path={`/player-profile`}
+				element={
+					<>
+						{loading && <LoadingSpinner />}
+						{showMobileNav ? (
+							<Row>
+								<Col>
+									<MobileDropDownMenu />
+									<PlayerProfile
+										nameNode={nameNode}
+										profilePicture={profilePicture}
+									/>
+								</Col>
+							</Row>
+						) : (
+							<Row className="sidebar-row">
+								<Col xs={2} className="sidebar-column">
+									<SideBarNav />
+								</Col>
+								<Col xs={10} className="column p-5">
+									<PlayerProfile
+										nameNode={nameNode}
+										profilePicture={profilePicture}
+									/>
+								</Col>
+							</Row>
+						)}
+					</>
+				}
+			/>
+		</Routes>
 	);
 };
 
