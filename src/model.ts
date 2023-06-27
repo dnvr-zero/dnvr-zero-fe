@@ -20,23 +20,9 @@ export interface GameInfoModalProps {
 }
 
 // SingleTaskModal.tsx
-export interface SingleTaskModalProps extends GameInfoModalProps {
-	_id: string;
-	name: string;
-	description: string;
-	points: number | string;
-	createdby: string;
-}
+export interface SingleTaskModalProps extends GameInfoModalProps, Tasks {}
 
 // TaskHolder.tsx
 export interface TaskHolderProps {
-	tasks:
-		| {
-				_id: string;
-				name: string;
-				description: string;
-				points: string;
-				createdby: string;
-		  }[]
-		| null;
+	tasks: Tasks[] | null;
 }
