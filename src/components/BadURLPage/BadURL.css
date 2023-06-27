@@ -1,0 +1,28 @@
+.badURL-contaner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.bad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badURL-button {
+    border-radius: 10px;
+	box-shadow: 0 1px 3px 1px #1a383f;
+	font-weight: 700;
+	background-color: #2f6470;
+	border: none;
+	padding: 5px 20px;
+	transition: 0.2s ease-in-out;
+    width: 12em;
+}
+
+.badURL-button:hover {
+	box-shadow: 0 1px 5px 2px #1a383f;
+	background-color: #418999;
+}

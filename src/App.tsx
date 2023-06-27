@@ -4,6 +4,7 @@ import MobileDropDownMenu from './components/MobileDropDownMenu/MobileDropDownMe
 import { Row, Col } from 'react-bootstrap';
 import { fetchTaskData, fetchPlayersData } from './apiCalls';
 import LoginPage from './components/LoginPage/LoginPage';
+import BadURL from './components/BadURLPage/BadURL';
 import { Routes, Route } from 'react-router-dom';
 import TaskHolder from './components/TaskHolder/TaskHolder';
 import PlayerProfile from './components/PlayerProfile/PlayerProfile';
@@ -103,6 +104,14 @@ const App: React.FC = () => {
 					</>
 				}
 			/>
+            <Route
+					path="*"
+					element={
+						<div>
+							<BadURL />
+						</div>
+					}
+				/>
 		</Routes>
 	);
 };
