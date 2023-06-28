@@ -1,7 +1,8 @@
-import './SingleTaskModal.css'
+import './SingleTaskModal.css';
 import * as React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { SingleTaskModalProps } from '../../model';
+import { Link } from 'react-router-dom';
 
 const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 	show,
@@ -30,8 +31,17 @@ const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 			<Modal.Body className="text-center">
 				<p>{description}</p>
 			</Modal.Body>
-			<Button className="single-task-modal-button">Sign-Up For Task</Button>
-			<Button className="single-task-modal-button">Go to Task Details</Button>
+			<div className='modal-button-container'>
+				<Button className="single-task-modal-button">Sign-Up For Task</Button>
+				<Link
+					to="/tasks/task-details"
+					style={{ textDecoration: 'none', color: 'inherit' }}
+				>
+					<Button className="single-task-modal-button">
+						Go to Task Details
+					</Button>
+				</Link>
+			</div>
 		</Modal>
 	);
 };

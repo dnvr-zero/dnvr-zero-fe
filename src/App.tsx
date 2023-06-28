@@ -13,6 +13,7 @@ import PlayerSignUp from './components/PlayerSignUp/PlayerSignUp';
 import { Tasks } from './model';
 import useGitHubOAuth from './hooks/useGitHubOAuth';
 import useMobileNav from './hooks/useMobileNav';
+import TaskDetails from './components/TaskDetails/TaskDetails';
 
 // interface Players {
 //     _id: string;
@@ -104,14 +105,39 @@ const App: React.FC = () => {
 					</>
 				}
 			/>
-            <Route
-					path="*"
-					element={
-						<div>
-							<BadURL />
-						</div>
-					}
-				/>
+			<Route
+				path={`/tasks/task-details`}
+				element={
+					<>
+						{loading && <LoadingSpinner />}
+						{showMobileNav ? (
+							<Row>
+								<Col>
+									<MobileDropDownMenu />
+									<TaskDetails />
+								</Col>
+							</Row>
+						) : (
+							<Row className="sidebar-row">
+								<Col xs={2} className="sidebar-column">
+									<SideBarNav />
+								</Col>
+								<Col xs={10} className="column p-5">
+									<TaskDetails />
+								</Col>
+							</Row>
+						)}
+					</>
+				}
+			/>
+			<Route
+				path="*"
+				element={
+					<div>
+						<BadURL />
+					</div>
+				}
+			/>
 		</Routes>
 	);
 };
