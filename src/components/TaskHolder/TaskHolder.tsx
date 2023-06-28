@@ -1,4 +1,4 @@
-import './TaskHolder.css'
+import './TaskHolder.css';
 import * as React from 'react';
 import SingleTask from '../SingleTask/SingleTask';
 import { Container, Form, Dropdown } from 'react-bootstrap';

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import './PlayerProfile.css'
-import { Container, Image, Button } from 'react-bootstrap';
+import './PlayerProfile.css';
+import { Container, Image, Button, Tab, Tabs } from 'react-bootstrap';
 import { PlayerProfileProps } from '../../model';
 
 const PlayerProfile: React.FC<PlayerProfileProps> = ({
@@ -25,41 +25,23 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 				</div>
 			</Container>
 			<div className="current-task-div">
-				<h3 className="current-task-text">Current Tasks</h3>
-				<Container className="player-task-container">
-					<div className="task-and-button-div">
-						<h3>Task Description</h3>{' '}
-						<Button className="update-button">Update</Button>
+				<div className="player-task-container">
+					<div className='tabs-div'>
+						<Tabs
+							defaultActiveKey="profile"
+							id="justify-tab-example"
+							className="tabs-container"
+							justify
+						>
+							<Tab eventKey="home" title="In-Progress">
+								Tab content for Home
+							</Tab>
+							<Tab eventKey="profile" title="Interested">
+								Tab content for Profile
+							</Tab>
+						</Tabs>
 					</div>
-					<div className="task-and-button-div">
-						<h3>Task Description</h3>{' '}
-						<Button className="update-button">Update</Button>
-					</div>
-					<div className="task-and-button-div">
-						<h3>Task Description</h3>{' '}
-						<Button className="update-button">Update</Button>
-					</div>
-					<div className="task-and-button-div">
-						<h3>Task Description</h3>{' '}
-						<Button className="update-button">Update</Button>
-					</div>
-					<div className="task-and-button-div">
-						<h3>Task Description</h3>{' '}
-						<Button className="update-button">Update</Button>
-					</div>
-					<div className="task-and-button-div">
-						<h3>Task Description</h3>{' '}
-						<Button className="update-button">Update</Button>
-					</div>
-					<div className="task-and-button-div">
-						<h3>Task Description</h3>{' '}
-						<Button className="update-button">Update</Button>
-					</div>
-					<div className="task-and-button-div">
-						<h3>Task Description</h3>{' '}
-						<Button className="update-button">Update</Button>
-					</div>
-				</Container>
+				</div>
 			</div>
 		</div>
 	);
