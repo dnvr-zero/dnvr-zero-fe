@@ -38,6 +38,11 @@
 	margin-top: 10px;
 }
 
+.username:hover {
+    cursor: pointer;
+    color: #0b80f5
+}
+
 .current-task-div {
 	display: flex;
 	/* flex-direction: column; */

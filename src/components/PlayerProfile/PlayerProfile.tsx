@@ -4,6 +4,7 @@ import { Container, Image, Button, Tab, Tabs } from 'react-bootstrap';
 import { PlayerProfileProps } from '../../model';
 import InProgressTaskModal from '../InProgressTaskModal/InProgressTaskModal';
 import InterestedTasksModal from '../InterestedTasksModal/InterestedTasksModal';
+import CompletedTaskModal from '../CompletedTaskModal/CompletedTaskModal';
 
 const PlayerProfile: React.FC<PlayerProfileProps> = ({
 	name,
@@ -14,6 +15,9 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 
 	const [showInterestedTaskModal, setShowInterestedTaskModal] =
 		React.useState<boolean>(false);
+	
+        const [showCompletedTaskModal, setShowCompletedTaskModal] =
+		React.useState<boolean>(false);
 
 	return (
 		<div className="player-profile-div">
@@ -22,7 +26,7 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 				<Image src={profilePicture} roundedCircle className="profile-image" />
 				<div className="text-container">
 					<h6>
-						<b className="profile-link">Tasks Completed:</b> 187
+						<b>Username:</b> <span className='username'>burrit0000s</span>
 					</h6>
 					<h6>
 						<b>Points Earned:</b> 2,123
@@ -188,7 +192,7 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 									</div>
 								</Container>
 							</Tab>
-							<Tab eventKey="home" title="Interested: 3">
+							<Tab eventKey="interesed" title="Interested: 3">
 								<Container className="task-tab-container">
 									<div>
 										<Button
@@ -238,6 +242,120 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 										<InterestedTasksModal
 											show={showInterestedTaskModal}
 											onHide={() => setShowInterestedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+									</div>
+								</Container>
+							</Tab>
+							<Tab eventKey="completed" title="Completed: 6">
+								<Container className="task-tab-container">
+									<div>
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowCompletedTaskModal(true)}
+										>
+											<h3 className="interested-task-title">
+												Completed Task Name
+											</h3>
+										</Button>
+										<CompletedTaskModal
+											show={showCompletedTaskModal}
+											onHide={() => setShowCompletedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowCompletedTaskModal(true)}
+										>
+											<h3 className="interested-task-title">
+												Completed Task Name
+											</h3>
+										</Button>
+										<CompletedTaskModal
+											show={showCompletedTaskModal}
+											onHide={() => setShowCompletedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowCompletedTaskModal(true)}
+										>
+											<h3 className="interested-task-title">
+												Completed Task Name
+											</h3>
+										</Button>
+										<CompletedTaskModal
+											show={showCompletedTaskModal}
+											onHide={() => setShowCompletedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowCompletedTaskModal(true)}
+										>
+											<h3 className="interested-task-title">
+												Completed Task Name
+											</h3>
+										</Button>
+										<CompletedTaskModal
+											show={showCompletedTaskModal}
+											onHide={() => setShowCompletedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowCompletedTaskModal(true)}
+										>
+											<h3 className="interested-task-title">
+												Completed Task Name
+											</h3>
+										</Button>
+										<CompletedTaskModal
+											show={showCompletedTaskModal}
+											onHide={() => setShowCompletedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowCompletedTaskModal(true)}
+										>
+											<h3 className="interested-task-title">
+												Completed Task Name
+											</h3>
+										</Button>
+										<CompletedTaskModal
+											show={showCompletedTaskModal}
+											onHide={() => setShowCompletedTaskModal(false)}
 											// key={1}
 											// _id={1}
 											// name='Jerry Task'
