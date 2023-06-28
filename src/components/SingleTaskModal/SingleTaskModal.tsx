@@ -22,7 +22,7 @@ const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 			centered
 		>
 			<Modal.Header className="modal-header">
-				<Modal.Title>
+				<Modal.Title id={_id}>
 					<strong>{name}</strong>
 				</Modal.Title>
 				<p>{points}</p>
@@ -31,7 +31,7 @@ const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 			<Modal.Body className="text-center">
 				<p>{description}</p>
 			</Modal.Body>
-			<div className='modal-button-container'>
+			<div className="modal-button-container">
 				<Button className="single-task-modal-button">Sign-Up For Task</Button>
 				<Link
 					to="/tasks/task-details"

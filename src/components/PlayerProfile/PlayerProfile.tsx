@@ -8,25 +8,26 @@ import CompletedTaskModal from '../CompletedTaskModal/CompletedTaskModal';
 
 const PlayerProfile: React.FC<PlayerProfileProps> = ({
 	name,
-	profilePicture,
+	profilePictureUrl,
+    userName
 }) => {
 	const [showInProgressTaskModal, setShowInProgressTaskModal] =
 		React.useState<boolean>(false);
 
 	const [showInterestedTaskModal, setShowInterestedTaskModal] =
 		React.useState<boolean>(false);
-	
-        const [showCompletedTaskModal, setShowCompletedTaskModal] =
+
+	const [showCompletedTaskModal, setShowCompletedTaskModal] =
 		React.useState<boolean>(false);
 
 	return (
 		<div className="player-profile-div">
 			<h1 className="player-profile-title-text">Welcome, {name}</h1>
 			<Container className="player-container">
-				<Image src={profilePicture} roundedCircle className="profile-image" />
+				<Image src={profilePictureUrl} roundedCircle className="profile-image" />
 				<div className="text-container">
 					<h6>
-						<b>Username:</b> <span className='username'>burrit0000s</span>
+						<b>Username:</b> <span className="username">{userName}</span>
 					</h6>
 					<h6>
 						<b>Points Earned:</b> 2,123

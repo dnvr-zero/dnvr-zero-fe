@@ -85,7 +85,8 @@ const App: React.FC = () => {
 									<MobileDropDownMenu />
 									<PlayerProfile
 										name={userData?.name || ''}
-										profilePicture={userData?.profilePicture || ''}
+										profilePictureUrl={userData?.profilePictureUrl || ''}
+                                        userName={userData?.userName || ''}
 									/>
 								</Col>
 							</Row>
@@ -97,7 +98,8 @@ const App: React.FC = () => {
 								<Col xs={10} className="column p-5">
 									<PlayerProfile
 										name={userData?.name || ''}
-										profilePicture={userData?.profilePicture || ''}
+										profilePictureUrl={userData?.profilePictureUrl || ''}
+                                        userName={userData?.userName || ''}
 									/>
 								</Col>
 							</Row>

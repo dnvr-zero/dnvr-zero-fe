@@ -10,7 +10,8 @@ export interface Tasks {
 // PlayerProfile.tsx
 export interface PlayerProfileProps {
 	name: string;
-	profilePicture: string;
+	profilePictureUrl: string;
+	userName: string;
 }
 
 // GameInfoModal.tsx

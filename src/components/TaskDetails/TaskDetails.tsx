@@ -12,13 +12,13 @@ import { Link } from 'react-router-dom';
 const TaskDetails: React.FC = () => {
 	const renderInProgress = (props: any) => (
 		<Tooltip id="toolTip" {...props}>
-			Add to "In-Progress"
+			Adds Task to "In-Progress"
 		</Tooltip>
 	);
 
 	const renderInterest = (props: any) => (
 		<Tooltip id="toolTip" {...props}>
-			Add to "Interested"
+			Adds Task to "Interested"
 		</Tooltip>
 	);
 
@@ -66,7 +66,7 @@ const TaskDetails: React.FC = () => {
 						overlay={renderInProgress}
 					>
 						{/* <Link to="/tasks/task-details"> */}
-							<Button id="button-one">I'll do this task</Button>
+							<Button id="button-one">Sign-up for Task</Button>
 						{/* </Link> */}
 					</OverlayTrigger>
 					<OverlayTrigger
@@ -74,7 +74,7 @@ const TaskDetails: React.FC = () => {
 						delay={{ show: 200, hide: 200 }}
 						overlay={renderInterest}
 					>
-						<Button id="button-two">I'm Interested</Button>
+						<Button id="button-two">Show Interest in Task</Button>
 					</OverlayTrigger>
 				</ButtonGroup>
 			</Card>

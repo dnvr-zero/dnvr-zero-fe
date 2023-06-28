@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 
 interface GitHubUserData {
 	name: string;
-	profilePicture: string;
+	profilePictureUrl: string;
+    userName: string;
 }
 
 const useGitHubOAuth = (): GitHubUserData | null => {
@@ -26,10 +27,12 @@ const useGitHubOAuth = (): GitHubUserData | null => {
 						const data = await response.json();
 						const profilePictureUrl = data.avatar_url;
 						const name = data.name;
+                        const userName = data.login
 
 						setUserData({
 							name,
-							profilePicture: profilePictureUrl,
+							profilePictureUrl,
+                            userName
 						});
 					}
 				}

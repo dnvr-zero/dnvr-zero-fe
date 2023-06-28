@@ -66,7 +66,10 @@ const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 						{/* Sort by Name or Points */}
 					</Dropdown.Toggle>
 					<Dropdown.Menu>
-						{/* <Dropdown.Item eventKey="Date" onClick={() => handleSortChange('Date')}>
+						{/* <Dropdown.Item
+							eventKey="Date"
+							onClick={() => handleSortChange('Date')}
+						>
 							Date
 						</Dropdown.Item> */}
 						<Dropdown.Item
