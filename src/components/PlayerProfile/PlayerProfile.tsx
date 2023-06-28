@@ -59,12 +59,174 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 											// points='87'
 											// createdby='Jerry'
 										/>
+										<Button
+											className="in-progress-task-button-container"
+											onClick={() => setShowInProgressTaskModal(true)}
+										>
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<InProgressTaskModal
+											show={showInProgressTaskModal}
+											onHide={() => setShowInProgressTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="in-progress-task-button-container"
+											onClick={() => setShowInProgressTaskModal(true)}
+										>
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<InProgressTaskModal
+											show={showInProgressTaskModal}
+											onHide={() => setShowInProgressTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="in-progress-task-button-container"
+											onClick={() => setShowInProgressTaskModal(true)}
+										>
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<InProgressTaskModal
+											show={showInProgressTaskModal}
+											onHide={() => setShowInProgressTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="in-progress-task-button-container"
+											onClick={() => setShowInProgressTaskModal(true)}
+										>
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<InProgressTaskModal
+											show={showInProgressTaskModal}
+											onHide={() => setShowInProgressTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="in-progress-task-button-container"
+											onClick={() => setShowInProgressTaskModal(true)}
+										>
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<InProgressTaskModal
+											show={showInProgressTaskModal}
+											onHide={() => setShowInProgressTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="in-progress-task-button-container"
+											onClick={() => setShowInProgressTaskModal(true)}
+										>
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<InProgressTaskModal
+											show={showInProgressTaskModal}
+											onHide={() => setShowInProgressTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="in-progress-task-button-container"
+											onClick={() => setShowInProgressTaskModal(true)}
+										>
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<InProgressTaskModal
+											show={showInProgressTaskModal}
+											onHide={() => setShowInProgressTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
 									</div>
 								</Container>
 							</Tab>
 							<Tab eventKey="home" title="Interested: 3">
 								<Container className="task-tab-container">
 									<div>
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowInterestedTaskModal(true)}
+										>
+											<h3 className="interested-task-title">
+												Interested Task Name
+											</h3>
+										</Button>
+										<InterestedTasksModal
+											show={showInterestedTaskModal}
+											onHide={() => setShowInterestedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowInterestedTaskModal(true)}
+										>
+											<h3 className="interested-task-title">
+												Interested Task Name
+											</h3>
+										</Button>
+										<InterestedTasksModal
+											show={showInterestedTaskModal}
+											onHide={() => setShowInterestedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
 										<Button
 											className="interested-task-button-container"
 											onClick={() => setShowInterestedTaskModal(true)}

@@ -23,7 +23,7 @@ const InterestedTasksModal: React.FC<InterestedTasksModalProps> = ({
 		>
 			<Modal.Header className="interested-modal-header">
 				<Modal.Title>
-					<strong>Task Name</strong>
+					<strong>INTERESTED Task Name</strong>
 				</Modal.Title>
 				<p>Points: 45</p>
 				<p>Created By: Terry McTavish</p>

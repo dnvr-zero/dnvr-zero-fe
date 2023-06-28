@@ -23,7 +23,7 @@ const InProgressTaskModal: React.FC<InProgressTaskModalProps> = ({
 		>
 			<Modal.Header className="in-progress-modal-header">
 				<Modal.Title>
-					<strong>Task Name</strong>
+					<strong>IN-PROGRESS Task Name</strong>
 				</Modal.Title>
 				<p>Points: 45</p>
 				<p>Created By: Terry McTavish</p>
