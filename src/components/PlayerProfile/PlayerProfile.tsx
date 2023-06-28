@@ -14,10 +14,7 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 				<Image src={profilePicture} roundedCircle className="profile-image" />
 				<div className="text-container">
 					<h6>
-						<b>Tasks in Progress:</b> 7
-					</h6>
-					<h6>
-						<b>Tasks Completed:</b> 187
+						<b className='profile-link'>Tasks Completed:</b> 187
 					</h6>
 					<h6>
 						<b>Points Earned:</b> 2,123
@@ -26,18 +23,83 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 			</Container>
 			<div className="current-task-div">
 				<div className="player-task-container">
-					<div className='tabs-div'>
+					<div className="tabs-div">
 						<Tabs
 							defaultActiveKey="profile"
 							id="justify-tab-example"
 							className="tabs-container"
 							justify
 						>
-							<Tab eventKey="home" title="In-Progress">
-								Tab content for Home
+							<Tab
+								eventKey="home"
+								title="In-Progress: 8"
+								
+							>
+								<Container className="task-tab-container">
+									<div>
+										<Button className="in-progress-task-button-container">
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<Button className="in-progress-task-button-container">
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<Button className="in-progress-task-button-container">
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<Button className="in-progress-task-button-container">
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<Button className="in-progress-task-button-container">
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<Button className="in-progress-task-button-container">
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<Button className="in-progress-task-button-container">
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+										<Button className="in-progress-task-button-container">
+											<h3 className="in-progress-task-title">
+												In-Progress Task Name
+											</h3>
+										</Button>
+									</div>
+								</Container>
 							</Tab>
-							<Tab eventKey="profile" title="Interested">
-								Tab content for Profile
+							<Tab eventKey="profile" title="Interested: 3">
+								<Container className="task-tab-container">
+									<div>
+										<Button className="interested-task-button-container">
+											<h3 className="interested-task-title">
+												Interested Task Name
+											</h3>
+										</Button>
+										<Button className="interested-task-button-container">
+											<h3 className="interested-task-title">
+												Interested Task Name
+											</h3>
+										</Button>
+										<Button className="interested-task-button-container">
+											<h3 className="interested-task-title">
+												Interested Task Name
+											</h3>
+										</Button>
+									</div>
+								</Container>
 							</Tab>
 						</Tabs>
 					</div>

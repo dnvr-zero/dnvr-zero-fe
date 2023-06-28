@@ -22,13 +22,13 @@
 	justify-content: center;
 	border-radius: 10px;
 	padding: 10px;
-	box-shadow: 0px 0px 10px 5px #2f6470;
-	width: 55%;
+	box-shadow: 0px 0px 10px 5px lightgray;
+	width: 50%;
 	gap: 4em;
 }
 
 .profile-image {
-	width: 35%;
+	width: 30%;
 }
 
 .text-container {
@@ -40,7 +40,7 @@
 
 .current-task-div {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	align-items: center;
 	margin-top: 4%;
 }
@@ -58,13 +58,13 @@
 	flex-direction: column;
 	align-items: center;
 	margin-top: 0.5%;
-	overflow: auto;
-	height: 28vh;
+	/* overflow: auto; */
+	height: 38vh;
 	width: 80vw;
 	gap: 15px;
 	padding: 10px;
 	border-radius: 10px;
-	box-shadow: 0px 0px 10px 5px lightgray;
+	box-shadow: 0px 0px 10px 1px #2f6470;
 }
 
 .tabs-div {
@@ -80,10 +80,46 @@
 .tabs-container .nav-link {
 	color: black; /* Replace #FF0000 with the desired text color */
 }
-tabs-container .nav-item.show .nav-link, .tabs-container .nav-link.active {
-    background-color: #2f6470;
-    color: whitesmoke
-  }
+tabs-container .nav-item.show .nav-link,
+.tabs-container .nav-link.active {
+	background-color: #2f6470;
+	color: whitesmoke;
+}
+
+.task-tab-container {
+	overflow: auto;
+	height: 13em;
+	padding: 5px;
+}
+
+.in-progress-task-button-container,
+.interested-task-button-container {
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px 1px #1a383f;
+	font-weight: 700;
+	background-color: #2f6470;
+	border: none;
+	/* padding: 5px 20px; */
+	transition: 0.2s ease-in-out;
+	margin-bottom: 1%;
+}
+
+.in-progress-task-button-container:hover,
+.interested-task-button-container:hover {
+	box-shadow: 0 1px 5px 2px #1a383f;
+	background-color: #418999;
+}
+
+.in-progress-task-title,
+.interested-task-title {
+	font-size: 1.5em;
+	font-weight: 800;
+	margin-right: 5%;
+}
 
 /* .task-and-button-div {
 	width: 100%;
@@ -93,7 +129,7 @@ tabs-container .nav-item.show .nav-link, .tabs-container .nav-link.active {
 	background-color: whitesmoke;
 } */
 
-.update-button {
+/* .update-button {
 	border-radius: 10px;
 	box-shadow: 0 1px 3px 1px #1a383f;
 	font-weight: 700;
@@ -106,4 +142,4 @@ tabs-container .nav-item.show .nav-link, .tabs-container .nav-link.active {
 .update-button:hover {
 	box-shadow: 0 1px 5px 2px #1a383f;
 	background-color: #418999;
-}
+} */

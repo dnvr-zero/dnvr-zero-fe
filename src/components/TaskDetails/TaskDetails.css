@@ -61,7 +61,7 @@
 	border-radius: 15px;
 }
 
-.bold:hover {
+.profile-link:hover {
 	cursor: pointer;
     color: #0b80f5
 }

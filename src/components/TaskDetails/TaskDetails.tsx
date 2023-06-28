@@ -34,7 +34,7 @@ const TaskDetails: React.FC = () => {
 							</Card.Title>
 							<div className="created-and-task-text-div">
 								<Card.Text>
-									<b>Created By:</b> <span className='bold'>Tony Fritz</span>
+									<b>Created By:</b> <span className='profile-link'>Tony Fritz</span>
 								</Card.Text>
 								<Card.Text>
 									<b>Task Points:</b> 250
