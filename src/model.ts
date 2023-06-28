@@ -7,6 +7,14 @@ export interface Tasks {
 	createdby: string;
 }
 
+export interface Players {
+    _id: string;
+    level: string;
+    name: string;
+    score: string;
+    email: string;
+}
+
 // PlayerProfile.tsx
 export interface PlayerProfileProps {
 	name: string;
@@ -26,4 +34,9 @@ export interface SingleTaskModalProps extends GameInfoModalProps, Tasks {}
 // TaskHolder.tsx
 export interface TaskHolderProps {
 	tasks: Tasks[] | null;
+}
+
+// AllPlayersPage.tsx
+export interface AllPlayersPageProps {
+	players: Players[] | null;
 }

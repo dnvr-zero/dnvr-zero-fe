@@ -18,26 +18,27 @@
     width: 12em;
 }
 
-#eventsButton:hover,
+#playerProfileButton:hover,
+#tasksButton:hover,
 #playersButton:hover,
+#learnButton:hover {
+	box-shadow: 0 1px 5px 2px #1a383f;
+	background-color: #418999;
+}
+
+/* Disabled Buttons */
+#eventsButton:hover,
 #teamsButton:hover {
 	cursor: inherit;
     color: #1a383f
 }
 
 #eventsButton:hover::before,
-#playersButton:hover::before,
 #teamsButton:hover::before,
 #eventsButton:hover::after,
-#playersButton:hover::after,
 #teamsButton:hover::after {
 	content: ' 𝐗 ';
     color: whitesmoke;
 }
 
-#playerProfileButton:hover,
-#tasksButton:hover,
-#learnButton:hover {
-	box-shadow: 0 1px 5px 2px #1a383f;
-	background-color: #418999;
-}
+

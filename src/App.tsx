@@ -10,22 +10,16 @@ import TaskHolder from './components/TaskHolder/TaskHolder';
 import PlayerProfile from './components/PlayerProfile/PlayerProfile';
 import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 import PlayerSignUp from './components/PlayerSignUp/PlayerSignUp';
-import { Tasks } from './model';
+import { Tasks, Players } from './model';
 import useGitHubOAuth from './hooks/useGitHubOAuth';
 import useMobileNav from './hooks/useMobileNav';
 import TaskDetails from './components/TaskDetails/TaskDetails';
-
-// interface Players {
-//     _id: string;
-//     level: number;
-//     name: string;
-//     score: number;
-// }
+import AllPlayersPage from './components/AllPlayersPage/AllPlayersPage';
 
 const App: React.FC = () => {
 	const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
+	const [players, setPlayers] = React.useState<Players[] | null>(null);
 	const [loading, setLoading] = React.useState<boolean>(false);
-	// const [players, setPlayers] = React.useState<Players[] | null>(null);
 
 	React.useEffect(() => {
 		setLoading(true);
@@ -34,13 +28,13 @@ const App: React.FC = () => {
 			.finally(() => setLoading(false));
 	}, []);
 
-	// React.useEffect(() => {
-	// 	setLoading(true);
-	//     fetchPlayersData()
-	// 		.then((players) => setPlayers(players))
-	// 		.finally(() => setLoading(false));
-	// }, []);
-	// console.log('PLAYERS: ', players);
+	React.useEffect(() => {
+		setLoading(true);
+		fetchPlayersData()
+			.then((players) => setPlayers(players))
+			.finally(() => setLoading(false));
+	}, []);
+	console.log('PLAYERS: ', players);
 
 	const userData = useGitHubOAuth();
 	const showMobileNav = useMobileNav();
@@ -86,7 +80,7 @@ const App: React.FC = () => {
 									<PlayerProfile
 										name={userData?.name || ''}
 										profilePictureUrl={userData?.profilePictureUrl || ''}
-                                        userName={userData?.userName || ''}
+										userName={userData?.userName || ''}
 									/>
 								</Col>
 							</Row>
@@ -99,7 +93,7 @@ const App: React.FC = () => {
 									<PlayerProfile
 										name={userData?.name || ''}
 										profilePictureUrl={userData?.profilePictureUrl || ''}
-                                        userName={userData?.userName || ''}
+										userName={userData?.userName || ''}
 									/>
 								</Col>
 							</Row>
@@ -126,6 +120,31 @@ const App: React.FC = () => {
 								</Col>
 								<Col xs={10} className="column p-5">
 									<TaskDetails />
+								</Col>
+							</Row>
+						)}
+					</>
+				}
+			/>
+			<Route
+				path={`/all-players`}
+				element={
+					<>
+						{loading && <LoadingSpinner />}
+						{showMobileNav ? (
+							<Row>
+								<Col>
+									<MobileDropDownMenu />
+									<AllPlayersPage players={players}/>
+								</Col>
+							</Row>
+						) : (
+							<Row className="sidebar-row">
+								<Col xs={2} className="sidebar-column">
+									<SideBarNav />
+								</Col>
+								<Col xs={10} className="column p-5">
+									<AllPlayersPage players={players}/>
 								</Col>
 							</Row>
 						)}

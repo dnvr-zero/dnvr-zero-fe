@@ -21,7 +21,12 @@ const SideBarButtons: React.FC<SideBarButtonsProps> = () => {
 				<Button id="tasksButton">Tasks</Button>
 			</Link>
 			<Button id="eventsButton">Events</Button>
-			<Button id="playersButton">Players</Button>
+			<Link
+				to="/all-players"
+				style={{ textDecoration: 'none', color: 'inherit' }}
+			>
+				<Button id="playersButton">Players</Button>
+			</Link>
 			<Button id="teamsButton">Teams</Button>
 			<Button id="learnButton" onClick={() => setShowModal(true)}>
 				Learn How To Play
