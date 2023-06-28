@@ -2,11 +2,15 @@ import * as React from 'react';
 import './PlayerProfile.css';
 import { Container, Image, Button, Tab, Tabs } from 'react-bootstrap';
 import { PlayerProfileProps } from '../../model';
+import InProgressTaskModal from '../InProgressTaskModal/InProgressTaskModal';
 
 const PlayerProfile: React.FC<PlayerProfileProps> = ({
 	name,
 	profilePicture,
 }) => {
+	const [showInProgressTaskModal, setShowInProgressTaskModal] =
+		React.useState<boolean>(false);
+
 	return (
 		<div className="player-profile-div">
 			<h1 className="player-profile-title-text">Welcome, {name}</h1>
@@ -14,7 +18,7 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 				<Image src={profilePicture} roundedCircle className="profile-image" />
 				<div className="text-container">
 					<h6>
-						<b className='profile-link'>Tasks Completed:</b> 187
+						<b className="profile-link">Tasks Completed:</b> 187
 					</h6>
 					<h6>
 						<b>Points Earned:</b> 2,123
@@ -30,57 +34,31 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 							className="tabs-container"
 							justify
 						>
-							<Tab
-								eventKey="home"
-								title="In-Progress: 8"
-								
-							>
+							<Tab eventKey="profile" title="In-Progress: 8">
 								<Container className="task-tab-container">
 									<div>
-										<Button className="in-progress-task-button-container">
+										<Button
+											className="in-progress-task-button-container"
+											onClick={() => setShowInProgressTaskModal(true)}
+										>
 											<h3 className="in-progress-task-title">
 												In-Progress Task Name
 											</h3>
 										</Button>
-										<Button className="in-progress-task-button-container">
-											<h3 className="in-progress-task-title">
-												In-Progress Task Name
-											</h3>
-										</Button>
-										<Button className="in-progress-task-button-container">
-											<h3 className="in-progress-task-title">
-												In-Progress Task Name
-											</h3>
-										</Button>
-										<Button className="in-progress-task-button-container">
-											<h3 className="in-progress-task-title">
-												In-Progress Task Name
-											</h3>
-										</Button>
-										<Button className="in-progress-task-button-container">
-											<h3 className="in-progress-task-title">
-												In-Progress Task Name
-											</h3>
-										</Button>
-										<Button className="in-progress-task-button-container">
-											<h3 className="in-progress-task-title">
-												In-Progress Task Name
-											</h3>
-										</Button>
-										<Button className="in-progress-task-button-container">
-											<h3 className="in-progress-task-title">
-												In-Progress Task Name
-											</h3>
-										</Button>
-										<Button className="in-progress-task-button-container">
-											<h3 className="in-progress-task-title">
-												In-Progress Task Name
-											</h3>
-										</Button>
+										<InProgressTaskModal
+											show={showInProgressTaskModal}
+											onHide={() => setShowInProgressTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
 									</div>
 								</Container>
 							</Tab>
-							<Tab eventKey="profile" title="Interested: 3">
+							<Tab eventKey="home" title="Interested: 3">
 								<Container className="task-tab-container">
 									<div>
 										<Button className="interested-task-button-container">
