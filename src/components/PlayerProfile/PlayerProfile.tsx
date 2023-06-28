@@ -3,12 +3,16 @@ import './PlayerProfile.css';
 import { Container, Image, Button, Tab, Tabs } from 'react-bootstrap';
 import { PlayerProfileProps } from '../../model';
 import InProgressTaskModal from '../InProgressTaskModal/InProgressTaskModal';
+import InterestedTasksModal from '../InterestedTasksModal/InterestedTasksModal';
 
 const PlayerProfile: React.FC<PlayerProfileProps> = ({
 	name,
 	profilePicture,
 }) => {
 	const [showInProgressTaskModal, setShowInProgressTaskModal] =
+		React.useState<boolean>(false);
+
+	const [showInterestedTaskModal, setShowInterestedTaskModal] =
 		React.useState<boolean>(false);
 
 	return (
@@ -61,21 +65,24 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 							<Tab eventKey="home" title="Interested: 3">
 								<Container className="task-tab-container">
 									<div>
-										<Button className="interested-task-button-container">
+										<Button
+											className="interested-task-button-container"
+											onClick={() => setShowInterestedTaskModal(true)}
+										>
 											<h3 className="interested-task-title">
 												Interested Task Name
 											</h3>
 										</Button>
-										<Button className="interested-task-button-container">
-											<h3 className="interested-task-title">
-												Interested Task Name
-											</h3>
-										</Button>
-										<Button className="interested-task-button-container">
-											<h3 className="interested-task-title">
-												Interested Task Name
-											</h3>
-										</Button>
+										<InterestedTasksModal
+											show={showInterestedTaskModal}
+											onHide={() => setShowInterestedTaskModal(false)}
+											// key={1}
+											// _id={1}
+											// name='Jerry Task'
+											// description='Some Description'
+											// points='87'
+											// createdby='Jerry'
+										/>
 									</div>
 								</Container>
 							</Tab>
