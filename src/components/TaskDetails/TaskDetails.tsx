@@ -23,7 +23,7 @@ const TaskDetails: React.FC = () => {
 
 	return (
 		<div className="task-details-container">
-			<h1 className="task-details-title-text">TASK NAME Details</h1>
+			{/* <h1 className="task-details-title-text">TASK NAME Details</h1> */}
 			<Card className="main-card">
 				<Card.Body>
 					<div className="card-div">
