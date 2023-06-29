@@ -1,0 +1,38 @@
+.completed-modal-header {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1%;
+}
+
+.points {
+    margin-bottom: 0;
+}
+
+.date-completed {
+    box-shadow: 0 1px 5px 2px #1a383f;
+    padding: 0 15px;
+    border-radius: 10px;
+}
+
+.completed-modal-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.completed-task-modal-button {
+    width: 25em;
+    margin-bottom: 3%;
+    border-radius: 10px;
+	box-shadow: 0 1px 3px 1px #1a383f;
+	font-weight: 700;
+	background-color: #2f6470;
+	border: none;
+	padding: 5px 20px;
+	transition: 0.2s ease-in-out;
+}
+
+.completed-task-modal-button:hover {
+    box-shadow: 0 1px 5px 2px #1a383f;
+	background-color: #418999;
+}

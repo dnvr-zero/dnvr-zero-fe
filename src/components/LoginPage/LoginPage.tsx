@@ -3,7 +3,7 @@ import { Container, Button, ButtonGroup } from 'react-bootstrap';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import '../styles/LoginPage.css';
+import './LoginPage.css';
 
 interface LoginPageProps {}
 

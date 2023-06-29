@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Modal } from 'react-bootstrap';
-import { GameInfoModalProps } from '../model';
+import { GameInfoModalProps } from '../../model';
 
 const GameInfoModal: React.FC<GameInfoModalProps> = ({ show, onHide }) => {
 	return (
@@ -13,7 +13,10 @@ const GameInfoModal: React.FC<GameInfoModalProps> = ({ show, onHide }) => {
 		>
 			<Modal.Header closeButton>
 				<Modal.Title>
-					Learn How To Play <strong>DNVR-<i>zero</i></strong>
+					Learn How To Play{' '}
+					<strong>
+						DNVR-<i>zero</i>
+					</strong>
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>

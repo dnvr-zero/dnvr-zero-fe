@@ -1,6 +1,6 @@
+import './PlayerSignUp.css'
 import * as React from 'react';
-import { Button, Col, Row, Form, InputGroup } from 'react-bootstrap';
-import '../styles/PlayerSignUp.css';
+import { Button, Col, Row, Form } from 'react-bootstrap';
 
 interface PlayerSignUpProps {}
 

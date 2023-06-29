@@ -1,8 +1,8 @@
-import '../styles/SingleTask.css';
+import './SingleTask.css';
 import * as React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import SingleTaskModal from './SingleTaskModal';
-import { Tasks } from '../model';
+import SingleTaskModal from '../SingleTaskModal/SingleTaskModal';
+import { Tasks } from '../../model';
 
 const SingleTask: React.FC<Tasks> = ({
 	_id,
