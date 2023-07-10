@@ -34,7 +34,7 @@ const SingleTaskModal: React.FC<SingleTaskModalProps> = ({
 			<div className="modal-button-container">
 				<Button className="single-task-modal-button">Sign-Up For Task</Button>
 				<Link
-					to="/tasks/task-details"
+					to="/tasks/task-details/"
 					style={{ textDecoration: 'none', color: 'inherit' }}
 				>
 					<Button className="single-task-modal-button">

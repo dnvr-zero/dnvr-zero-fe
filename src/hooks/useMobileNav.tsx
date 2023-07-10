@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const useMobileNav = () => {
 	const [showMobileNav, setShowMobileNav] = useState<boolean>(false);
 
+	const handleResize = useCallback(() => {
+		const mobileNav = window.innerWidth < 850;
+		setShowMobileNav(mobileNav);
+	}, []);
+    
 	useEffect(() => {
-		const handleResize = () => {
-			const mobileNav = window.innerWidth < 850;
-			setShowMobileNav(mobileNav);
-		};
-
 		window.addEventListener('resize', handleResize);
 		handleResize();
 

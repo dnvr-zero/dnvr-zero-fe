@@ -34,7 +34,7 @@ const App: React.FC = () => {
 			.then((players) => setPlayers(players))
 			.finally(() => setLoading(false));
 	}, []);
-	console.log('PLAYERS: ', players);
+	// console.log('PLAYERS: ', players);
 
 	const userData = useGitHubOAuth();
 	const showMobileNav = useMobileNav();
