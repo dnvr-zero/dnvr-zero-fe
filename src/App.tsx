@@ -2,7 +2,8 @@ import * as React from 'react';
 import SideBarNav from './components/SideBarNav/SideBarNav';
 import MobileDropDownMenu from './components/MobileDropDownMenu/MobileDropDownMenu';
 import { Row, Col } from 'react-bootstrap';
-import { fetchTaskData, fetchPlayersData } from './apiCalls';
+import { fetchTaskData } from './apiCalls';
+// import { fetchTaskData, fetchPlayersData } from './apiCalls';
 import LoginPage from './components/LoginPage/LoginPage';
 import BadURL from './components/BadURLPage/BadURL';
 import { Routes, Route } from 'react-router-dom';
@@ -10,15 +11,16 @@ import TaskHolder from './components/TaskHolder/TaskHolder';
 import PlayerProfile from './components/PlayerProfile/PlayerProfile';
 import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 import PlayerSignUp from './components/PlayerSignUp/PlayerSignUp';
-import { Tasks, Players } from './model';
+import { Tasks } from './model';
+// import { Tasks, Players } from './model';
 import useGitHubOAuth from './hooks/useGitHubOAuth';
 import useMobileNav from './hooks/useMobileNav';
 import TaskDetails from './components/TaskDetails/TaskDetails';
-import AllPlayersPage from './components/AllPlayersPage/AllPlayersPage';
+// import AllPlayersPage from './components/AllPlayersPage/AllPlayersPage';
 
 const App: React.FC = () => {
 	const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
-	const [players, setPlayers] = React.useState<Players[] | null>(null);
+	// const [players, setPlayers] = React.useState<Players[] | null>(null);
 	const [loading, setLoading] = React.useState<boolean>(false);
 
 	React.useEffect(() => {
@@ -28,12 +30,12 @@ const App: React.FC = () => {
 			.finally(() => setLoading(false));
 	}, []);
 
-	React.useEffect(() => {
-		setLoading(true);
-		fetchPlayersData()
-			.then((players) => setPlayers(players))
-			.finally(() => setLoading(false));
-	}, []);
+	// React.useEffect(() => {
+	// 	setLoading(true);
+	// 	fetchPlayersData()
+	// 		.then((players) => setPlayers(players))
+	// 		.finally(() => setLoading(false));
+	// }, []);
 	// console.log('PLAYERS: ', players);
 
 	const userData = useGitHubOAuth();
@@ -126,7 +128,7 @@ const App: React.FC = () => {
 					</>
 				}
 			/>
-			<Route
+			{/* <Route
 				path={`/all-players`}
 				element={
 					<>
@@ -150,7 +152,7 @@ const App: React.FC = () => {
 						)}
 					</>
 				}
-			/>
+			/> */}
 			<Route
 				path="*"
 				element={

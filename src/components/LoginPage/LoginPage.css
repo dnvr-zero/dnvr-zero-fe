@@ -1,37 +1,97 @@
 .login-div {
-    background-color: #2f6470;
+	background-color: #2f6470;
 }
 
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    margin-top: 20%;
-    padding: 20px;
-    color: whitesmoke
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	color: whitesmoke;
+}
+
+.title-text {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0 1px 30px rgba(0, 0, 0, 0.5)
+}
+
+.login-form-holder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin-top: 5%;
+	margin-bottom: 1%;
 }
 
 .button-group {
-    gap: 15px;
+	/* gap: 15px; */
+	display: flex;
+	flex-direction: column;
+    align-items: center;
 }
 
-#loginButtonOne, #loginButtonTwo {
-    border-radius: 10px;
-	box-shadow: 0 1px 3px 1px #1a383f;
+.oauth-buttons-div,
+.guest-and-new-user-div-child {
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+	margin-bottom: 10%;
+}
+
+.guest-and-new-user-div-parent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin-top: 15%;
+    background-color: whitesmoke;
+    padding: 25px 25px 5px 25px;
+    border-radius: 15px;
+    color: #1a383f;
+    font-weight: 600;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
+}
+
+#googleOAuthButton,
+#gitHubOAuthButton,
+#submitButton {
+	border-radius: 10px;
+	box-shadow: 0 0 5px #1a383f;
 	background-color: #418999;
 	border: none;
 	padding: 5px 20px;
 	transition: 0.2s ease-in-out;
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-#loginButtonOne:hover, #loginButtonTwo:hover {
-    box-shadow: 0 1px 5px 2px whitesmoke;
+#googleOAuthButton:hover,
+#gitHubOAuthButton:hover,
+#guestLogin:hover {
+	box-shadow: 0 0 15px whitesmoke;
 	background-color: #2f6470;
 }
 
-.icon {
-    margin-left: 5px;
+#guestLogin,
+#createNewUser {
+    border-radius: 10px;
+	box-shadow: 0 0 5px #1a383f;
+	background-color: #2f6470;
+	border: none;
+	padding: 5px 20px;
+	transition: 0.2s ease-in-out;
+	display: flex;
+	align-items: center;
+}
+
+#guestLogin:hover,
+#createNewUser:hover {
+    box-shadow: 0 0 15px #1a383f;
+	background-color: #418999;
+}
+
+.github-icon,
+.google-icon {
+	margin-left: 5px;
 }
