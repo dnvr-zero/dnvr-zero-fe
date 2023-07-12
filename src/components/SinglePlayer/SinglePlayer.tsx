@@ -13,7 +13,7 @@ const SinglePlayer: React.FC<Players> = ({
 }) => {
 	const generateFakerAvatar = () => faker.image.avatar();
 	return (
-		<Card id={_id} className="single-player-card">
+		<Card data-testid="single-player" id={_id} className="single-player-card">
 			<Card.Img
 				variant="top"
 				src={generateFakerAvatar()}
@@ -23,7 +23,7 @@ const SinglePlayer: React.FC<Players> = ({
 				<div className="card-text">
 					<Card.Title className="card-name">{name}</Card.Title>
 					<Card.Text>
-						<b>Player Score:</b> {parseFloat(score).toLocaleString()}
+						<b>Player Score:</b> {score.toLocaleString()}
 					</Card.Text>
 					<Card.Text>
 						<b>Player Level:</b> {level}
