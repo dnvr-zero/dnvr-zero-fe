@@ -21,20 +21,19 @@ const GameInfoModal: React.FC<GameInfoModalProps> = ({ show, onHide }) => {
 			</Modal.Header>
 			<Modal.Body>
 				<p>
-					<b>#1.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<b>#1.</b> You put your left hand in!
 					<br></br>
 					<br></br>
-					<b>#2.</b> Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.
+					<b>#2.</b> You put your left hand out!
 					<br></br>
 					<br></br>
-					<b>#3.</b> Duis aute irure dolor in reprehenderit in voluptate velit
-					esse cillum dolore eu fugiat nulla pariatur.
+					<b>#3.</b> You put your left hand in and you shake it all about!
 					<br></br>
 					<br></br>
-					<b>#4.</b> Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.
+					<b>#4.</b> You do the hokey-pokey and you turn yourself around!
+					<br></br>
+					<br></br>
+					<b>#5.</b> That's what it's all about!
 				</p>
 			</Modal.Body>
 		</Modal>

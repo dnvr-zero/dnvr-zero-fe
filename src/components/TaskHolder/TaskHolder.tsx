@@ -87,7 +87,7 @@ const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 							eventKey="PointsDescending"
 							onClick={() => handleSortChange('PointsDescending')} // Check if it works when "Tasks" data is back up!
 						>
-							Coming Soon!: Points (descending)
+							Points (descending)
 						</Dropdown.Item>
 					</Dropdown.Menu>
 				</Dropdown>
