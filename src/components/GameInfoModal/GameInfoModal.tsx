@@ -13,7 +13,7 @@ const GameInfoModal: React.FC<GameInfoModalProps> = ({ show, onHide }) => {
 		>
 			<Modal.Header closeButton>
 				<Modal.Title>
-					Learn How To Play{' '}
+					Learn How To Play
 					<strong>
 						DNVR-<i>zero</i>
 					</strong>

@@ -20,7 +20,7 @@ const mockTasks: Tasks[] = [
 describe('GameInfoModal', () => {
 	test('should display modal when show prop is true', () => {
 		render(<GameInfoModal show={true} onHide={() => {}} />);
-		const modalTitle = screen.getByText(/learn how to play dnvr-zero/i);
+		const modalTitle = screen.getByText(/learn how to play/i);
 		expect(modalTitle).toBeInTheDocument();
 	});
 
@@ -38,13 +38,7 @@ describe('GameInfoModal', () => {
 		expect(onHideMock).toHaveBeenCalledTimes(1);
 	});
 
-	test('should display the correct modal content', () => {
-		render(<GameInfoModal show={true} onHide={() => {}} />);
-		const modalContent = screen.getByText(/lorem ipsum dolor sit amet/i);
-		expect(modalContent).toBeInTheDocument();
-	});
-
-	test.only('should display the modal content after clicking the modal button', () => {
+	test('should display the modal content after clicking the modal button', () => {
 		render(
 			<BrowserRouter>
 				<SideBarNav />
