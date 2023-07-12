@@ -19,7 +19,7 @@ describe('BadURL', () => {
 		expect(window.location.pathname).toBe(expectedURL);
 	};
 
-	it('renders the error message correctly', () => {
+	test('renders the error message correctly', () => {
 		renderWithRouter(<BadURL />, { route: '/bad-url' });
 
 		const errorMessage = screen.getByText("That's a bad URL for sure, eh.");
@@ -31,7 +31,7 @@ describe('BadURL', () => {
 		expect(errorMessageAlt).not.toBeInTheDocument();
 	});
 
-	it('navigates to the "/tasks" page when "Return to Tasks" button is clicked', () => {
+	test('navigates to the "/tasks" page when "Return to Tasks" button is clicked', () => {
 		clickButtonAndAssertURL('Return to Tasks', '/tasks');
 	});
 });
