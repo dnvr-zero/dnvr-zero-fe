@@ -2,13 +2,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 100%;
+	margin-top: 2.8%;
 }
 
 .player-profile-title-text {
 	width: 90%;
 	padding: 10px;
-	margin-bottom: 5%;
+	margin-bottom: 4%;
 	border-radius: 10px;
 	box-shadow: 0 8px 8px lightgray;
 	text-align: center;
@@ -39,8 +39,8 @@
 }
 
 .username:hover {
-    cursor: pointer;
-    color: #0b80f5
+	cursor: pointer;
+	color: #0b80f5;
 }
 
 .current-task-div {
@@ -48,23 +48,22 @@
 	/* flex-direction: column; */
 	align-items: center;
 	margin-top: 4%;
+	width: 100%;
 }
 
 .current-task-text {
-	font-weight: 700;
 	width: 15vw;
 	text-align: center;
+	font-weight: 700;
 	border-radius: 5px;
 }
 
 .player-task-container {
-	/* background-color: #2f6470; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 0.5%;
-	/* overflow: auto; */
-	height: 38vh;
+	height: 57vh;
 	width: 80vw;
 	gap: 15px;
 	padding: 10px;
@@ -74,12 +73,10 @@
 
 .tabs-div {
 	width: 100%;
-	/* background-color: #2f6470; */
 }
 
 .tabs-container {
 	margin-bottom: 2%;
-	/* background-color: #2f6470; */
 }
 
 .tabs-container .nav-link {
@@ -92,8 +89,11 @@ tabs-container .nav-item.show .nav-link,
 }
 
 .task-tab-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	overflow: auto;
-	height: 13em;
+	height: 45vh;
 	padding: 5px;
 }
 

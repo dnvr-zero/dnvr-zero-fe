@@ -9,7 +9,7 @@ import CompletedTaskModal from '../CompletedTaskModal/CompletedTaskModal';
 const PlayerProfile: React.FC<PlayerProfileProps> = ({
 	name,
 	profilePictureUrl,
-    userName
+	userName,
 }) => {
 	const [showInProgressTaskModal, setShowInProgressTaskModal] =
 		React.useState<boolean>(false);
@@ -21,10 +21,14 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 		React.useState<boolean>(false);
 
 	return (
-		<div className="player-profile-div">
+		<Container className="player-profile-div">
 			<h1 className="player-profile-title-text">Welcome, {name}</h1>
 			<Container className="player-container">
-				<Image src={profilePictureUrl} roundedCircle className="profile-image" />
+				<Image
+					src={profilePictureUrl}
+					roundedCircle
+					className="profile-image"
+				/>
 				<div className="text-container">
 					<h6>
 						<b>Username:</b> <span className="username">{userName}</span>
@@ -371,7 +375,7 @@ const PlayerProfile: React.FC<PlayerProfileProps> = ({
 					</div>
 				</div>
 			</div>
-		</div>
+		</Container>
 	);
 };
 
