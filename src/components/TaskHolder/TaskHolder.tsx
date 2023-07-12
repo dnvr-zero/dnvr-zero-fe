@@ -24,10 +24,15 @@ const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 					// case 'Date':
 					// 	return taskA.name.localeCompare(taskB.name);
 
-					case 'Points':
+					case 'PointsAscending':
 						return (
 							parseInt(taskA.points.split(' ')[0]) -
 							parseInt(taskB.points.split(' ')[0])
+						);
+					case 'PointsDescending':
+						return (
+							parseInt(taskB.points.split(' ')[0]) -
+							parseInt(taskA.points.split(' ')[0])
 						);
 
 					default:
@@ -44,7 +49,7 @@ const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 		setSortOption(eventKey.toString());
 	};
 	return (
-		<div className="task-holder-container">
+		<Container className="task-holder-container">
 			<h1 className="task-title-text">Tasks</h1>
 			<div className="search-and-dropdown">
 				<Form className="search-form">
@@ -62,8 +67,8 @@ const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 						variant="secondary"
 						id="sort-dropdown-toggle"
 					>
-						Sort by {sortOption || '...'}
-						{/* Sort by Name or Points */}
+						{/* Sort by {sortOption || '...'} */}
+						Sort by Points
 					</Dropdown.Toggle>
 					<Dropdown.Menu>
 						{/* <Dropdown.Item
@@ -73,10 +78,16 @@ const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 							Date
 						</Dropdown.Item> */}
 						<Dropdown.Item
-							eventKey="Points"
-							onClick={() => handleSortChange('Points')}
+							eventKey="PointsAscending"
+							onClick={() => handleSortChange('PointsAscending')} // Check if it works when "Tasks" data is back up!
 						>
-							Points
+							Points (ascending)
+						</Dropdown.Item>
+						<Dropdown.Item
+							eventKey="PointsDescending"
+							onClick={() => handleSortChange('PointsDescending')} // Check if it works when "Tasks" data is back up!
+						>
+							Coming Soon!: Points (descending)
 						</Dropdown.Item>
 					</Dropdown.Menu>
 				</Dropdown>
@@ -93,7 +104,7 @@ const TaskHolder: React.FC<TaskHolderProps> = ({ tasks }) => {
 					/>
 				))}
 			</Container>
-		</div>
+		</Container>
 	);
 };
 

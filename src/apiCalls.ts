@@ -9,8 +9,8 @@ export const fetchTaskData = async (): Promise<any> => {
 		const json = await response.json();
 
 		return json;
-	} catch (error) {
-		console.log('ERROR!!!', error);
+	} catch (error: any) {
+        throw new Error('apiCalls.ts Failed to fetch "Tasks" data: ', error.message);
 	}
 };
 
