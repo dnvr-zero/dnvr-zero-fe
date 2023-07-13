@@ -2,9 +2,10 @@
 	box-sizing: border-box;
 }
 
-/* html {
-	background-color: #2f6470;
-} */
+html {
+    width: 100%;
+    height: 100%;
+}
 
 body {
 	margin: 0;
@@ -19,9 +20,3 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
-
-/* .sidebar-column {
-    flex-shrink: 0;
-    overflow-x: clip;
-    background-color: black;
-} */

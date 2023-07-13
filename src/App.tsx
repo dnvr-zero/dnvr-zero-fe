@@ -1,7 +1,7 @@
 import * as React from 'react';
 import SideBarNav from './components/SideBarNav/SideBarNav';
 import MobileDropDownMenu from './components/MobileDropDownMenu/MobileDropDownMenu';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import { fetchTaskData } from './apiCalls';
 // import { fetchTaskData, fetchPlayersData } from './apiCalls';
 import LoginPage from './components/LoginPage/LoginPage';
@@ -21,13 +21,16 @@ import TaskDetails from './components/TaskDetails/TaskDetails';
 const App: React.FC = () => {
 	const [tasks, setTasks] = React.useState<Tasks[] | null>(null);
 	// const [players, setPlayers] = React.useState<Players[] | null>(null);
-	const [loading, setLoading] = React.useState<boolean>(false);
+	// const [loading, setLoading] = React.useState<boolean>(false);
 
 	React.useEffect(() => {
-		setLoading(true);
+		// setLoading(true);
 		fetchTaskData()
 			.then((tasks) => setTasks(tasks.data))
-			.finally(() => setLoading(false));
+			.catch((error) => {
+				console.error('App.tsx Failed to fetch "Tasks":', error);
+			});
+		// .finally(() => setLoading(false));
 	}, []);
 
 	// React.useEffect(() => {
@@ -49,23 +52,25 @@ const App: React.FC = () => {
 				path="/tasks"
 				element={
 					<>
-						{loading && <LoadingSpinner />}
+						{/* {loading && <LoadingSpinner />} */}
 						{showMobileNav ? (
-							<Row>
+							<Container>
 								<Col>
 									<MobileDropDownMenu />
 									<TaskHolder tasks={tasks} />
 								</Col>
-							</Row>
+							</Container>
 						) : (
-							<Row className="sidebar-row">
-								<Col xs={2} className="sidebar-column">
-									<SideBarNav />
-								</Col>
-								<Col xs={10} className="column p-5">
-									<TaskHolder tasks={tasks} />
-								</Col>
-							</Row>
+							<Container>
+								<Row>
+									<Col xs={2}>
+										<SideBarNav />
+									</Col>
+									<Col xs={10}>
+										<TaskHolder tasks={tasks} />
+									</Col>
+								</Row>
+							</Container>
 						)}
 					</>
 				}
@@ -74,31 +79,35 @@ const App: React.FC = () => {
 				path={`/player-profile`}
 				element={
 					<>
-						{loading && <LoadingSpinner />}
+						{/* {loading && <LoadingSpinner />} */}
 						{showMobileNav ? (
-							<Row>
-								<Col>
-									<MobileDropDownMenu />
-									<PlayerProfile
-										name={userData?.name || ''}
-										profilePictureUrl={userData?.profilePictureUrl || ''}
-										userName={userData?.userName || ''}
-									/>
-								</Col>
-							</Row>
+							<Container>
+								<Row>
+									<Col>
+										<MobileDropDownMenu />
+										<PlayerProfile
+											name={userData?.name || ''}
+											profilePictureUrl={userData?.profilePictureUrl || ''}
+											userName={userData?.userName || ''}
+										/>
+									</Col>
+								</Row>
+							</Container>
 						) : (
-							<Row className="sidebar-row">
-								<Col xs={2} className="sidebar-column">
-									<SideBarNav />
-								</Col>
-								<Col xs={10} className="column p-5">
-									<PlayerProfile
-										name={userData?.name || ''}
-										profilePictureUrl={userData?.profilePictureUrl || ''}
-										userName={userData?.userName || ''}
-									/>
-								</Col>
-							</Row>
+							<Container>
+								<Row>
+									<Col xs={2}>
+										<SideBarNav />
+									</Col>
+									<Col xs={10}>
+										<PlayerProfile
+											name={userData?.name || ''}
+											profilePictureUrl={userData?.profilePictureUrl || ''}
+											userName={userData?.userName || ''}
+										/>
+									</Col>
+								</Row>
+							</Container>
 						)}
 					</>
 				}
@@ -107,7 +116,7 @@ const App: React.FC = () => {
 				path={`/tasks/task-details`}
 				element={
 					<>
-						{loading && <LoadingSpinner />}
+						{/* {loading && <LoadingSpinner />} */}
 						{showMobileNav ? (
 							<Row>
 								<Col>

@@ -4,7 +4,7 @@ const useMobileNav = () => {
 	const [showMobileNav, setShowMobileNav] = useState<boolean>(false);
 
 	const handleResize = useCallback(() => {
-		const mobileNav = window.innerWidth < 850;
+		const mobileNav = window.innerWidth < 950;
 		setShowMobileNav(mobileNav);
 	}, []);
     
