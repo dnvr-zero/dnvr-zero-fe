@@ -28,7 +28,7 @@ const SideBarButtons: React.FC<SideBarButtonsProps> = () => {
 				<Button id="playersButton">Players</Button>
 			</Link>
 			<Button id="teamsButton">Teams</Button>
-			<Button id="learnButton" onClick={() => setShowModal(true)}>
+			<Button data-testid='learn-button' id="learnButton" onClick={() => setShowModal(true)}>
 				Learn How To Play
 			</Button>
 			<GameInfoModal show={showModal} onHide={() => setShowModal(false)} />
