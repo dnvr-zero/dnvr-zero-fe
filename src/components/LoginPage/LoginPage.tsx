@@ -42,11 +42,12 @@ const LoginPage: React.FC<LoginPageProps> = () => {
 						Login with <FcGoogle className="icon" />
 					</Button> */}
 						<Link to="/player-profile">
-							<Button id="googleOAuthButton">
+							<Button data-testid="googleOAuthButton" id="googleOAuthButton">
 								Login with <FcGoogle className="google-icon" />
 							</Button>
 						</Link>
 						<Button
+							data-testid="gitHubOAuthButton"
 							id="gitHubOAuthButton"
 							href="http://localhost:8000/auth"
 							// href="https://dnvr-zero-be.vercel.app/auth"

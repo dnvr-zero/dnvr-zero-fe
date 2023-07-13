@@ -8,7 +8,8 @@ const AllPlayersPage: React.FunctionComponent<AllPlayersPageProps> = ({
 	players,
 }) => {
 	return (
-		<div className="all-players-container">
+        // Change div to Container once players data is back
+		<div className="all-players-container"> 
 			<h1 className="players-title-text">Players</h1>
 			{players?.map((player: Players) => (
 				<SinglePlayer
