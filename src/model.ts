@@ -11,7 +11,7 @@ export interface Players {
     _id: string;
     level: string;
     name: string;
-    score: string;
+    score: number;
     email: string;
 }
 
