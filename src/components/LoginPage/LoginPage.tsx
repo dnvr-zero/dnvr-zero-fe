@@ -49,8 +49,8 @@ const LoginPage: React.FC<LoginPageProps> = () => {
 						<Button
 							data-testid="gitHubOAuthButton"
 							id="gitHubOAuthButton"
-							href="http://localhost:8000/auth"
-							// href="https://dnvr-zero-be.vercel.app/auth"
+							// href="http://localhost:8000/auth"
+							href="https://dnvr-zero-be.vercel.app/auth"
 						>
 							Login with <FaGithub className="github-icon" />
 						</Button>
